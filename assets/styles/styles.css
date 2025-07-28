@@ -1,0 +1,740 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f7f9fc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(247, 251, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+    z-index: 100;
+    transition: all 0.3s ease;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.site-header.scrolled {
+    background: rgba(247, 251, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(52, 152, 219, 0.15);
+}
+
+.logo-container {
+    display: flex !important;
+    align-items: center;
+    padding: 15px 0;
+    min-height: 60px;
+    visibility: visible !important;
+}
+
+.logo {
+    max-height: 50px;
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.logo.hidden {
+    display: none;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a5490;
+    margin: 0;
+    transition: all 0.3s ease;
+    display: block !important;
+}
+
+/* Logo will only hide header text when actually loaded, not by default */
+
+.header-text {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-subtitle {
+    font-size: 0.9rem;
+    color: #3498db;
+    margin: -5px 0 0 0;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    margin-top: 80px; /* Account for fixed header */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7), 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Hero CTA Buttons */
+.hero-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-cta-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    min-width: 200px;
+    text-align: center;
+}
+
+.hero-cta-button.primary {
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.hero-cta-button.primary:hover {
+    background: rgba(52, 152, 219, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(52, 152, 219, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-cta-button.secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1a5490;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    border-color: rgba(52, 152, 219, 0.5);
+}
+
+.hero-cta-button .cta-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.hero-cta-button .cta-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 400;
+    display: block;
+}
+
+/* Hero Contact Info */
+.hero-contact {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-contact-links {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-contact-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-contact-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Slider Styles */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.25) 0%, rgba(26, 188, 156, 0.2) 50%, rgba(241, 196, 15, 0.15) 100%);
+}
+
+/* Slider Navigation */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 15;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(15px);
+}
+
+.slider-arrow:hover {
+    background: rgba(52, 152, 219, 0.8);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-arrow.prev {
+    left: 30px;
+}
+
+.slider-arrow.next {
+    right: 30px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 15;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Description Section */
+.description {
+    padding: 80px 0;
+    background: white;
+}
+
+.description h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a5490;
+}
+
+.description > .container > p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #2c3e50;
+    line-height: 1.8;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #ebf8ff 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.2);
+    border-color: rgba(26, 188, 156, 0.3);
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #1a5490;
+}
+
+.feature p {
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ebf8ff 0%, #f0f9ff 100%);
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a5490;
+}
+
+.cta-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: block;
+    text-decoration: none;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, #3498db 0%, #1abc9c 100%);
+    color: white;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(52, 152, 219, 0.5);
+}
+
+.cta-button.secondary {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+    color: #1a5490;
+    border-color: rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.15);
+}
+
+.cta-button.secondary:hover {
+    transform: translateY(-3px);
+    border-color: #3498db;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.25);
+}
+
+.cta-button h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.cta-button p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.button-text {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.cta-button.secondary .button-text {
+    background: linear-gradient(135deg, #3498db 0%, #1abc9c 100%);
+    color: white;
+}
+
+.cta-button:hover .button-text {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background: white;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1a5490;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #1a5490;
+}
+
+.contact-item a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header {
+        background: rgba(247, 251, 255, 0.98);
+    }
+    
+    .logo-container {
+        padding: 10px 0;
+        min-height: 50px;
+    }
+    
+    .logo {
+        max-height: 40px;
+        max-width: 160px;
+    }
+    
+    .logo-text {
+        font-size: 1.4rem;
+    }
+    
+    .header-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+        margin-top: 70px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .hero-cta-buttons {
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .hero-cta-button {
+        padding: 15px 20px;
+        min-width: 160px;
+    }
+    
+    .hero-cta-button .cta-title {
+        font-size: 1rem;
+    }
+    
+    .hero-cta-button .cta-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .hero-contact {
+        margin-top: 30px;
+    }
+    
+    .hero-contact-links {
+        gap: 15px;
+    }
+    
+    .hero-contact-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+    .slider-arrow {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .slider-arrow.prev {
+        left: 15px;
+    }
+    
+    .slider-arrow.next {
+        right: 15px;
+    }
+    
+    .slider-dots {
+        bottom: 20px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .description, .cta-section, .contact {
+        padding: 60px 0;
+    }
+    
+    .description h2, .cta-section h2, .contact h2 {
+        font-size: 2rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .cta-buttons {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cta-button {
+        padding: 30px 20px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        padding: 8px 0;
+        min-height: 45px;
+    }
+    
+    .logo {
+        max-height: 35px;
+        max-width: 140px;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .header-subtitle {
+        font-size: 0.75rem;
+    }
+    
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+        margin-top: 60px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    .hero-cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 25px;
+    }
+    
+    .hero-cta-button {
+        padding: 12px 18px;
+        min-width: 180px;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .hero-cta-button .cta-title {
+        font-size: 0.95rem;
+    }
+    
+    .hero-cta-button .cta-subtitle {
+        font-size: 0.75rem;
+    }
+    
+    .hero-contact {
+        margin-top: 25px;
+    }
+    
+    .hero-contact-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .hero-contact-link {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+        width: 100%;
+        max-width: 220px;
+    }
+    
+    .slider-arrow {
+        font-size: 1.2rem;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .slider-arrow.prev {
+        left: 10px;
+    }
+    
+    .slider-arrow.next {
+        right: 10px;
+    }
+    
+    .description h2, .cta-section h2, .contact h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-button h3 {
+        font-size: 1.4rem;
+    }
+}
