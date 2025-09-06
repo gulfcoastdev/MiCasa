@@ -699,7 +699,105 @@ body {
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
 }
 
-/* Benefits Section */\n.benefits {\n    padding: 80px 0;\n    background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);\n}\n\n.benefits h2 {\n    font-size: 2.5rem;\n    text-align: center;\n    margin-bottom: 50px;\n    color: #1a5490;\n}\n\n.benefits-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n    gap: 30px;\n    margin-top: 40px;\n}\n\n.benefit-item {\n    text-align: center;\n    padding: 25px 20px;\n    background: white;\n    border-radius: 12px;\n    border: 1px solid rgba(52, 152, 219, 0.15);\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.benefit-item:hover {\n    transform: translateY(-3px);\n    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);\n}\n\n.benefit-item h3 {\n    font-size: 1.2rem;\n    margin-bottom: 12px;\n    color: #1a5490;\n}\n\n.benefit-item p {\n    color: #2c3e50;\n    line-height: 1.5;\n    font-size: 0.95rem;\n}\n\n@media (max-width: 768px) {\n    .benefits {\n        padding: 60px 0;\n    }\n    \n    .benefits h2 {\n        font-size: 2rem;\n    }\n    \n    .benefits-grid {\n        grid-template-columns: 1fr;\n        gap: 20px;\n    }\n}\n\n/* Property Details & Availability Section */
+/* Benefits Section */
+.benefits {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.benefits h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a5490;
+}
+
+.benefits-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(52, 152, 219, 0.15);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.08);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+    border-color: rgba(52, 152, 219, 0.3);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ebf8ff 0%, #f0f9ff 100%);
+    border-radius: 50%;
+    border: 2px solid rgba(52, 152, 219, 0.2);
+}
+
+.benefit-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1a5490;
+    font-weight: 600;
+}
+
+.benefit-content p {
+    color: #2c3e50;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .benefits {
+        padding: 60px 0;
+    }
+    
+    .benefits h2 {
+        font-size: 2rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .benefit-card {
+        padding: 25px;
+        gap: 15px;
+    }
+    
+    .benefit-icon {
+        font-size: 2.5rem;
+        width: 50px;
+        height: 50px;
+    }
+}\n\n/* Property Details & Availability Section */
 .property-details-section {
     padding: 80px 0;
     background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
@@ -710,6 +808,46 @@ body {
     text-align: center;
     margin-bottom: 50px;
     color: #1a5490;
+}
+
+.universal-amenities {
+    text-align: center;
+    margin-bottom: 50px;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+}
+
+.universal-amenities h3 {
+    color: #1a5490;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.amenity-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ebf8ff 0%, #ffffff 100%);
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    font-weight: 500;
+    color: #1a5490;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
+}
+
+.amenity-icon {
+    font-size: 1.2rem;
 }
 
 .property-detail-group {
@@ -734,11 +872,63 @@ body {
     font-weight: 600;
 }
 
+.property-overview {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+    align-items: start;
+}
+
+.property-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.15);
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.property-detail-group:hover .property-image img {
+    transform: scale(1.05);
+}
+
+.property-info h3 {
+    color: #1a5490;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
 .property-detail-group .property-address {
     color: #666;
     font-size: 0.95rem;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     opacity: 0.8;
+}
+
+.square-footage {
+    color: #3498db;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.property-amenities h5 {
+    color: #1a5490;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.property-amenities .amenities-list {
+    margin-bottom: 0;
 }
 
 .availability-table {
@@ -786,110 +976,6 @@ body {
     font-weight: 600;
 }
 
-/* Property Amenities Section */
-.amenities-section {
-    padding: 80px 0;
-    background: white;
-}
-
-.amenities-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #1a5490;
-}
-
-.universal-amenities {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.universal-amenities h3 {
-    color: #1a5490;
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-}
-
-.amenity-highlights {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.amenity-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #ebf8ff 0%, #ffffff 100%);
-    padding: 15px 25px;
-    border-radius: 25px;
-    border: 1px solid rgba(52, 152, 219, 0.2);
-    font-weight: 500;
-    color: #1a5490;
-    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
-}
-
-.amenity-icon {
-    font-size: 1.2rem;
-}
-
-.properties-amenities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.property-amenities-card {
-    background: linear-gradient(135deg, #ffffff 0%, #ebf8ff 100%);
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid rgba(52, 152, 219, 0.2);
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.property-amenities-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
-}
-
-.property-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.property-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.property-amenities-card:hover .property-image img {
-    transform: scale(1.05);
-}
-
-.amenities-content {
-    padding: 25px;
-}
-
-.amenities-content h4 {
-    color: #1a5490;
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.square-footage {
-    color: #3498db;
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-}
-
 .amenities-list {
     list-style: none;
     padding: 0;
@@ -912,44 +998,108 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
 }
 
 .contact h2 {
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #1a5490;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-.contact-item {
+.contact-intro {
     text-align: center;
     font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    opacity: 0.9;
 }
 
-.contact-item strong {
-    display: block;
-    margin-bottom: 10px;
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
+    border-color: rgba(52, 152, 219, 0.4);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3498db 0%, #1abc9c 100%);
+    border-radius: 50%;
+    color: white;
+}
+
+.contact-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
     color: #1a5490;
+    font-weight: 600;
 }
 
-.contact-item a {
+.contact-link {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #3498db;
     text-decoration: none;
-    font-weight: 500;
+    margin-bottom: 5px;
     transition: color 0.3s ease;
 }
 
-.contact-item a:hover {
+.contact-link:hover {
     color: #1abc9c;
-    text-decoration: underline;
+}
+
+.contact-note {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.contact-cta {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-cta p {
+    font-size: 1rem;
+    color: #1a5490;
+    background: rgba(52, 152, 219, 0.05);
+    padding: 20px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    margin: 0;
 }
 
 /* Footer */
@@ -1070,17 +1220,18 @@ footer p {
         font-size: 2rem;
     }
     
-    .properties-amenities-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
     
     .amenity-highlights {
         gap: 20px;
     }
     
+    .property-overview {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
     .property-image {
-        height: 180px;
+        height: 200px;
     }
     
     .google-map {
@@ -1123,9 +1274,20 @@ footer p {
         padding: 30px 20px;
     }
     
-    .contact-info {
-        flex-direction: column;
-        gap: 30px;
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-card {
+        padding: 25px;
+        gap: 15px;
+    }
+    
+    .contact-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
     }
     
     .container {
