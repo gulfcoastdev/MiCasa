@@ -1,83 +1,59 @@
 // Google Maps Integration for Mi Casa Rentals
 let map;
 
-// Property locations with details
+// Property locations with details - 5 consolidated markers
 const properties = [
-    // Gated 4-Unit Community - 1810 W Gadsden St
-    {
-        address: "1810 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.419862779865245,
-        lng: -87.23847799627355,
-        title: "1810 W Gadsden",
-        info: "3 bed / 2 bath - $2,350/month<br>Gated Community",
-        type: "gated",
-        url: "#listing-1810-gadsden"
-    },
-    {
-        address: "1812 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.419862779865245,
-        lng: -87.23837799627355,
-        title: "1812 W Gadsden",
-        info: "3 bed / 2 bath - $2,350/month<br>Gated Community",
-        type: "gated",
-        url: "#listing-1812-gadsden"
-    },
-    {
-        address: "1816 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.419862779865245,
-        lng: -87.23827799627355,
-        title: "1816 W Gadsden",
-        info: "3 bed / 2 bath - $2,350/month<br>Gated Community",
-        type: "gated",
-        url: "#listing-1816-gadsden"
-    },
-    {
-        address: "1818 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.419862779865245,
-        lng: -87.23817799627355,
-        title: "1818 W Gadsden",
-        info: "3 bed / 2 bath - $2,350/month<br>Gated Community",
-        type: "gated",
-        url: "#listing-1818-gadsden"
-    },
-    // 1918 W Gadsden Duplex
-    {
-        address: "1918 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.420321286721673,
-        lng: -87.23991679528676,
-        title: "1918 W Gadsden - Unit A",
-        info: "3 bed / 2 bath - $2,250/month<br>Duplex Unit A",
-        type: "duplex",
-        url: "#listing-1918a-gadsden"
-    },
-    {
-        address: "1918 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.420321286721673,
-        lng: -87.23981679528676,
-        title: "1918 W Gadsden - Unit B",
-        info: "3 bed / 2 bath - $2,250/month<br>Duplex Unit B",
-        type: "duplex",
-        url: "#listing-1918b-gadsden"
-    },
-    // Yacht Harbor Dr
-    {
-        address: "4969 Yacht Harbor Dr, Pensacola, FL 32514",
-        lat: 30.514003753877137,
-        lng: -87.17162733479648,
-        title: "4969 Yacht Harbor Dr",
-        info: "2 bed / 1 bath - $1,750/month<br>Waterfront Area",
-        type: "single",
-        url: "#listing-yacht-harbor"
-    },
-    // Rebecca Street Apartments
+    // Rebecca Street - 4 Apartments
     {
         address: "1625 Rebecca St, Pensacola, FL 32534",
         lat: 30.530505377105996,
         lng: -87.2915285663669,
         title: "1625 Rebecca St",
         info: "1 bed / 1 bath - $1,500/month<br>4 Apartments Available",
+        price: "$1,500",
+        unitCount: "4 units",
         type: "apartments",
-        url: "#listing-rebecca"
+        zillowUrl: "https://www.zillow.com/homedetails/1625-Rebecca-St-APT-B-Pensacola-FL-32534/2103741034_zpid/",
+        sectionId: "rebecca-details"
+    },
+    // 1810 W Gadsden - 4 Units (Gated Community)
+    {
+        address: "1810-1818 W Gadsden St, Pensacola, FL 32501",
+        lat: 30.419862779865245,
+        lng: -87.23847799627355,
+        title: "1810 W Gadsden Community",
+        info: "3 bed / 2 bath - $2,350/month<br>Gated 4-Unit Community",
+        price: "$2,350",
+        unitCount: "4 units",
+        type: "gated",
+        zillowUrl: "https://www.zillow.com/homedetails/1816-W-Gadsden-St-Pensacola-FL-32501/333074300_zpid/",
+        sectionId: "gadsden-community-details"
+    },
+    // 1918 W Gadsden - 2 Units (Duplex)
+    {
+        address: "1918 W Gadsden St, Pensacola, FL 32501",
+        lat: 30.420321286721673,
+        lng: -87.23991679528676,
+        title: "1918 W Gadsden Duplex",
+        info: "3 bed / 2 bath - $2,250/month<br>2-Unit Duplex",
+        price: "$2,250",
+        unitCount: "2 units",
+        type: "duplex",
+        zillowUrl: "https://www.zillow.com/homedetails/1918-W-Gadsden-St-A-Pensacola-FL-32501/445876690_zpid/",
+        sectionId: "gadsden-duplex-details"
+    },
+    // Yacht Harbor Dr - 2 Units
+    {
+        address: "4969 Yacht Harbor Dr, Pensacola, FL 32514",
+        lat: 30.514003753877137,
+        lng: -87.17162733479648,
+        title: "4969 Yacht Harbor Dr",
+        info: "2 bed / 1 bath - $1,750/month<br>2 Units Available",
+        price: "$1,750",
+        unitCount: "2 units",
+        type: "single",
+        zillowUrl: null,
+        sectionId: "yacht-harbor-details"
     }
 ];
 
@@ -121,25 +97,39 @@ function initMap() {
                 position: { lat: property.lat, lng: property.lng },
                 map: map,
                 title: property.title,
-                content: createMarkerContent(property.type)
+                content: createMarkerContent(property.type, property.price)
             });
 
             // Create info window
+            const zillowLink = property.zillowUrl ? 
+                `<a href="${property.zillowUrl}" target="_blank" style="display: inline-block; background: #006aff; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: 500; margin-right: 6px;">
+                    Zillow
+                </a>` : '';
+            
             const infoWindow = new google.maps.InfoWindow({
                 content: `
-                    <div style="padding: 10px; max-width: 250px;">
+                    <div style="padding: 10px; max-width: 280px;">
                         <h3 style="color: #1a5490; margin: 0 0 8px 0; font-size: 16px;">
                             ${property.title}
                         </h3>
+                        <p style="margin: 0 0 6px 0; color: #2c3e50; font-size: 14px; font-weight: 500;">
+                            ${property.unitCount}
+                        </p>
                         <p style="margin: 0 0 8px 0; color: #2c3e50; font-size: 14px;">
                             ${property.info}
                         </p>
                         <p style="margin: 0 0 12px 0; color: #666; font-size: 12px;">
                             ${property.address}
                         </p>
-                        <a href="${property.url}" style="display: inline-block; background: #1a5490; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 500;">
-                            View Details
-                        </a>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <a href="#${property.sectionId}" style="display: inline-block; background: #1a5490; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: 500;" onclick="document.getElementById('${property.sectionId}').scrollIntoView({behavior: 'smooth'}); return false;">
+                                View Details
+                            </a>
+                            ${zillowLink}
+                            <a href="tel:8506912685" style="display: inline-block; background: #28a745; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: 500;">
+                                Call
+                            </a>
+                        </div>
                     </div>
                 `
             });
@@ -162,14 +152,35 @@ function initMap() {
     }
 }
 
-// Create custom marker content based on property type
-function createMarkerContent(type) {
+// Create custom marker content based on property type with price
+function createMarkerContent(type, price) {
+    const markerContainer = document.createElement('div');
+    markerContainer.style.display = 'flex';
+    markerContainer.style.flexDirection = 'column';
+    markerContainer.style.alignItems = 'center';
+    markerContainer.style.cursor = 'pointer';
+    
+    // Price label
+    const priceLabel = document.createElement('div');
+    priceLabel.textContent = price;
+    priceLabel.style.backgroundColor = 'white';
+    priceLabel.style.color = '#1a5490';
+    priceLabel.style.padding = '4px 8px';
+    priceLabel.style.borderRadius = '12px';
+    priceLabel.style.fontSize = '12px';
+    priceLabel.style.fontWeight = 'bold';
+    priceLabel.style.border = '1px solid #1a5490';
+    priceLabel.style.boxShadow = '0 2px 4px rgba(0,0,0,0.2)';
+    priceLabel.style.marginBottom = '4px';
+    priceLabel.style.whiteSpace = 'nowrap';
+    
+    // Pin element
     const pin = document.createElement('div');
-    pin.style.width = '20px';
-    pin.style.height = '20px';
+    pin.style.width = '24px';
+    pin.style.height = '24px';
     pin.style.borderRadius = '50%';
-    pin.style.border = '2px solid white';
-    pin.style.boxShadow = '0 2px 4px rgba(0,0,0,0.3)';
+    pin.style.border = '3px solid white';
+    pin.style.boxShadow = '0 2px 6px rgba(0,0,0,0.3)';
     
     switch (type) {
         case 'gated':
@@ -188,7 +199,10 @@ function createMarkerContent(type) {
             pin.style.backgroundColor = '#757575';
     }
     
-    return pin;
+    markerContainer.appendChild(priceLabel);
+    markerContainer.appendChild(pin);
+    
+    return markerContainer;
 }
 
 // Show fallback if map fails to load
