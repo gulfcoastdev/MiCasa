@@ -3,6 +3,19 @@ let map;
 
 // Property locations with details - 5 consolidated markers
 const properties = [
+    // 1810 W Gadsden - 4 Units (Gated Community) - PRIMARY PROPERTY
+    {
+        address: "1810-1818 W Gadsden St, Pensacola, FL 32501",
+        lat: 30.419862779865245,
+        lng: -87.23847799627355,
+        title: "1810 W Gadsden Community",
+        info: "3 bed / 2 bath - $2,350/month<br>Gated 4-Unit Community",
+        price: "$2,350",
+        unitCount: "4 units",
+        type: "gated",
+        zillowUrl: "https://www.avail.co/l/60590948",
+        sectionId: "gadsden-community-details"
+    },
     // Rebecca Street - 4 Apartments
     {
         address: "1625 Rebecca St, Pensacola, FL 32534",
@@ -15,19 +28,6 @@ const properties = [
         type: "apartments",
         zillowUrl: "https://www.avail.co/l/61109049",
         sectionId: "rebecca-details"
-    },
-    // 1810 W Gadsden - 4 Units (Gated Community)
-    {
-        address: "1810-1818 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.419862779865245,
-        lng: -87.23847799627355,
-        title: "1810 W Gadsden Community",
-        info: "3 bed / 2 bath - $2,350/month<br>Gated 4-Unit Community",
-        price: "$2,350",
-        unitCount: "4 units",
-        type: "gated",
-        zillowUrl: "https://www.avail.co/l/60590948",
-        sectionId: "gadsden-community-details"
     },
     // 1918 W Gadsden - 2 Units (Duplex)
     {
@@ -60,12 +60,12 @@ const properties = [
 // Initialize the map
 function initMap() {
     try {
-        // Center map on Pensacola (moved north to better display all properties)
-        const pensacola = { lat: 30.470, lng: -87.2169 };
+        // Center map to better show 1810 W Gadsden area
+        const centerPoint = { lat: 30.450, lng: -87.230 };
         
         map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 11,
-            center: pensacola,
+            zoom: 12,
+            center: centerPoint,
             mapId: "DEMO_MAP_ID",
             styles: [
                 {
