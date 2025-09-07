@@ -850,6 +850,29 @@ body {
     font-size: 1.2rem;
 }
 
+.pricing-info-inline {
+    background: linear-gradient(135deg, #3498db 0%, #1abc9c 100%);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.pricing-info-inline h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: white;
+}
+
+.pricing-info-inline p {
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.95;
+}
+
 .property-detail-group {
     background: white;
     border-radius: 16px;
@@ -993,6 +1016,33 @@ body {
 
 .amenities-list li:last-child {
     margin-bottom: 0;
+}
+
+/* Pricing Information */
+.pricing-info {
+    background: linear-gradient(135deg, #3498db 0%, #1abc9c 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.pricing-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.pricing-info p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.pricing-info strong {
+    font-weight: 600;
 }
 
 /* Contact Section */

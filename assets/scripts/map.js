@@ -13,7 +13,7 @@ const properties = [
         price: "$1,500",
         unitCount: "4 units",
         type: "apartments",
-        zillowUrl: "https://www.zillow.com/homedetails/1625-Rebecca-St-APT-B-Pensacola-FL-32534/2103741034_zpid/",
+        zillowUrl: "https://www.avail.co/l/61109049",
         sectionId: "rebecca-details"
     },
     // 1810 W Gadsden - 4 Units (Gated Community)
@@ -26,7 +26,7 @@ const properties = [
         price: "$2,350",
         unitCount: "4 units",
         type: "gated",
-        zillowUrl: "https://www.zillow.com/homedetails/1816-W-Gadsden-St-Pensacola-FL-32501/333074300_zpid/",
+        zillowUrl: "https://www.avail.co/l/60590948",
         sectionId: "gadsden-community-details"
     },
     // 1918 W Gadsden - 2 Units (Duplex)
@@ -39,7 +39,7 @@ const properties = [
         price: "$2,250",
         unitCount: "2 units",
         type: "duplex",
-        zillowUrl: "https://www.zillow.com/homedetails/1918-W-Gadsden-St-A-Pensacola-FL-32501/445876690_zpid/",
+        zillowUrl: "https://www.avail.co/l/60493799",
         sectionId: "gadsden-duplex-details"
     },
     // Yacht Harbor Dr - 2 Units
@@ -60,8 +60,8 @@ const properties = [
 // Initialize the map
 function initMap() {
     try {
-        // Center map on Pensacola
-        const pensacola = { lat: 30.4213, lng: -87.2169 };
+        // Center map on Pensacola (moved north to better display all properties)
+        const pensacola = { lat: 30.470, lng: -87.2169 };
         
         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 11,
