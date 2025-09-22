@@ -25,11 +25,12 @@ async function initMap() {
             return;
         }
 
-        // Center map to better show 1810 W Gadsden area
-        const centerPoint = { lat: 30.450, lng: -87.230 };
+        // Center map to show all properties (Rebecca St to Yacht Harbor)
+        // Rebecca: 30.530, Gadsden: 30.420, Yacht Harbor: 30.514
+        const centerPoint = { lat: 30.475, lng: -87.235 };
         
         map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 12,
+            zoom: 11,
             center: centerPoint,
             mapId: "DEMO_MAP_ID",
             styles: [
