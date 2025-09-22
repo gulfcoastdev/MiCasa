@@ -1,65 +1,30 @@
 // Google Maps Integration for Mi Casa Rentals
 let map;
-
-// Property locations with details - 5 consolidated markers
-const properties = [
-    // 1810 W Gadsden - 4 Units (Gated Community) - PRIMARY PROPERTY
-    {
-        address: "1810-1818 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.419862779865245,
-        lng: -87.23847799627355,
-        title: "1810 W Gadsden Community",
-        info: "3 bed / 2 bath - $2,350/month<br>Gated 4-Unit Community",
-        price: "$2,350",
-        unitCount: "4 units",
-        type: "gated",
-        zillowUrl: "https://www.avail.co/l/60590948",
-        sectionId: "gadsden-community-details"
-    },
-    // Rebecca Street - 4 Apartments
-    {
-        address: "1625 Rebecca St, Pensacola, FL 32534",
-        lat: 30.530505377105996,
-        lng: -87.2915285663669,
-        title: "1625 Rebecca St",
-        info: "1 bed / 1 bath - $1,500/month<br>4 Apartments Available",
-        price: "$1,500",
-        unitCount: "4 units",
-        type: "apartments",
-        zillowUrl: "https://www.avail.co/l/61109049",
-        sectionId: "rebecca-details"
-    },
-    // 1918 W Gadsden - 2 Units (Duplex)
-    {
-        address: "1918 W Gadsden St, Pensacola, FL 32501",
-        lat: 30.420321286721673,
-        lng: -87.23991679528676,
-        title: "1918 W Gadsden Duplex",
-        info: "3 bed / 2 bath - $2,250/month<br>2-Unit Duplex",
-        price: "$2,250",
-        unitCount: "2 units",
-        type: "duplex",
-        zillowUrl: "https://www.avail.co/l/60493799",
-        sectionId: "gadsden-duplex-details"
-    },
-    // Yacht Harbor Dr - 2 Units
-    {
-        address: "4969 Yacht Harbor Dr, Pensacola, FL 32514",
-        lat: 30.514003753877137,
-        lng: -87.17162733479648,
-        title: "4969 Yacht Harbor Dr",
-        info: "2 bed / 1 bath - $1,750/month<br>2 Units Available",
-        price: "$1,750",
-        unitCount: "2 units",
-        type: "single",
-        zillowUrl: null,
-        sectionId: "yacht-harbor-details"
-    }
-];
+let mapProperties = [];
 
 // Initialize the map
-function initMap() {
+async function initMap() {
     try {
+        // Load property data first
+        if (window.unitsDataManager && !window.unitsDataManager.isLoaded) {
+            try {
+                await window.unitsDataManager.loadData();
+                mapProperties = window.unitsDataManager.getMapProperties();
+            } catch (error) {
+                console.error('Failed to load units data for map:', error);
+                showMapFallback();
+                return;
+            }
+        } else if (window.unitsDataManager && window.unitsDataManager.isLoaded) {
+            mapProperties = window.unitsDataManager.getMapProperties();
+        }
+
+        if (mapProperties.length === 0) {
+            console.error('No property data available for map');
+            showMapFallback();
+            return;
+        }
+
         // Center map to better show 1810 W Gadsden area
         const centerPoint = { lat: 30.450, lng: -87.230 };
         
@@ -92,7 +57,7 @@ function initMap() {
         });
 
         // Add markers for each property
-        properties.forEach((property, index) => {
+        mapProperties.forEach((property, index) => {
             const marker = new google.maps.marker.AdvancedMarkerElement({
                 position: { lat: property.lat, lng: property.lng },
                 map: map,
