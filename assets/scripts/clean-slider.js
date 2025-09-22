@@ -80,17 +80,21 @@ function createSliderFromImages(imageFilenames) {
     });
     
     // Create previous button
-    const prevBtn = document.createElement('button');
+    const prevBtn = document.createElement('div');
     prevBtn.className = 'slider-arrow prev';
     prevBtn.innerHTML = '&#8249;';
-    prevBtn.type = 'button';
+    prevBtn.setAttribute('role', 'button');
+    prevBtn.setAttribute('tabindex', '0');
+    prevBtn.setAttribute('aria-label', 'Previous image');
     sliderContainer.appendChild(prevBtn);
     
     // Create next button
-    const nextBtn = document.createElement('button');
+    const nextBtn = document.createElement('div');
     nextBtn.className = 'slider-arrow next';
     nextBtn.innerHTML = '&#8250;';
-    nextBtn.type = 'button';
+    nextBtn.setAttribute('role', 'button');
+    nextBtn.setAttribute('tabindex', '0');
+    nextBtn.setAttribute('aria-label', 'Next image');
     sliderContainer.appendChild(nextBtn);
     
     // Create dots container
@@ -112,22 +116,43 @@ function createSliderFromImages(imageFilenames) {
     currentSlideIndex = 0;
     updateSlider();
     
-    // Add event listeners
+    // Add event listeners with better mobile support
     prevBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
+        goToPreviousSlide();
+    });
+    
+    prevBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         goToPreviousSlide();
     });
     
     nextBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         goToNextSlide();
     });
     
-    // Add dot click listeners
+    nextBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        goToNextSlide();
+    });
+    
+    // Add dot click listeners with mobile support
     const dots = dotsContainer.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
         dot.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
+            goToSlide(index);
+        });
+        
+        dot.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             goToSlide(index);
         });
     });
@@ -223,7 +248,7 @@ function startAutoSlide() {
     stopAutoSlide(); // Clear any existing interval
     autoSlideInterval = setInterval(function() {
         goToNextSlide();
-    }, 5000);
+    }, 8000);
 }
 
 function stopAutoSlide() {

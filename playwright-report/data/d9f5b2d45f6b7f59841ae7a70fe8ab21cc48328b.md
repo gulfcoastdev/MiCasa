@@ -1,0 +1,359 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - img "Mi Casa Rentals" [ref=e5]
+      - heading "Mi Casa Rentals" [level=1] [ref=e7]
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - button "Previous image" [ref=e39] [cursor=pointer]: ‹
+        - button "Next image" [ref=e40] [cursor=pointer]: ›
+      - generic [ref=e56]:
+        - heading "Furnished Rentals in Pensacola, Florida" [level=1] [ref=e57]
+        - paragraph [ref=e58]: Move-in ready apartments for short-term stays and long-term leases in beautiful Pensacola
+        - generic [ref=e59]:
+          - link "Short Stays Under one month" [ref=e60]:
+            - /url: https://micasa.directstays.com/
+            - generic [ref=e61]: Short Stays
+            - generic [ref=e62]: Under one month
+          - link "Long-Term Rentals Multiple months, annual" [ref=e63]:
+            - /url: https://www.avail.co/companies/micasa
+            - generic [ref=e64]: Long-Term Rentals
+            - generic [ref=e65]: Multiple months, annual
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: Questions or inquiries?
+          - generic [ref=e68]:
+            - link "📞 (850) 912-9225" [ref=e69]:
+              - /url: tel:+1-850-912-9225
+            - link "✉️ rentalspcola@gmail.com" [ref=e70]:
+              - /url: mailto:rentalspcola@gmail.com
+    - generic [ref=e72]:
+      - heading "Premium Furnished Apartments in Downtown Pensacola" [level=2] [ref=e73]
+      - paragraph [ref=e74]: Discover our collection of 12 beautifully furnished apartments in Pensacola, Florida. Perfect for corporate housing, extended stays, and monthly rentals, our move-in ready units feature everything you need for comfortable living. With years of successful hosting and consistently excellent reviews, we specialize in both short-term bookings and long-term leases throughout the Pensacola area.
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - heading "✨ Move-In Ready Furnished Apartments" [level=3] [ref=e77]
+          - paragraph [ref=e78]: Every unit includes furniture, kitchenware, linens, WiFi, and utilities - perfect for corporate housing and extended stays
+        - generic [ref=e79]:
+          - heading "🏆 Trusted Pensacola Property Management" [level=3] [ref=e80]
+          - paragraph [ref=e81]: Years of successful short-term and long-term rental management with excellent tenant reviews
+        - generic [ref=e82]:
+          - heading "🔄 Flexible Rental Terms" [level=3] [ref=e83]
+          - paragraph [ref=e84]: From weekend getaways to annual leases - corporate housing, monthly rentals, and extended stay options available
+    - generic [ref=e86]:
+      - heading "Property Locations" [level=2] [ref=e87]
+      - generic [ref=e90]:
+        - generic:
+          - button "Keyboard shortcuts"
+        - region "Map" [ref=e91]
+        - generic [ref=e92]:
+          - generic [ref=e126]:
+            - generic:
+              - generic:
+                - generic:
+                  - button "1625 Rebecca St" [ref=e128] [cursor=pointer]:
+                    - generic [ref=e130] [cursor=pointer]: $1,500
+                  - button "1810 W Gadsden Community" [ref=e132] [cursor=pointer]:
+                    - generic [ref=e134] [cursor=pointer]: $2,350
+                  - button "1918 W Gadsden Duplex" [ref=e136] [cursor=pointer]:
+                    - generic [ref=e138] [cursor=pointer]: $2,250
+                  - button "4969 Yacht Harbor Dr" [ref=e140] [cursor=pointer]:
+                    - generic [ref=e142] [cursor=pointer]: $1,750
+          - iframe [ref=e144]:
+            
+          - menubar [ref=e145] [cursor=pointer]:
+            - menuitemradio "Show street map" [checked] [ref=e147] [cursor=pointer]: Map
+            - menuitemradio "Show satellite imagery" [ref=e149] [cursor=pointer]: Satellite
+          - button "Toggle fullscreen view" [ref=e150] [cursor=pointer]
+          - generic:
+            - generic:
+              - button "Map camera controls" [ref=e152] [cursor=pointer]
+              - button "Drag Pegman onto the map to open Street View" [ref=e153] [cursor=pointer]:
+                - generic:
+                  - img "Street View Pegman Control"
+          - link "Open this area in Google Maps (opens a new window)" [ref=e155]:
+            - /url: https://maps.google.com/maps?ll=30.4213,-87.2169&z=11&t=m&hl=en-US&gl=US&mapclient=apiv3
+            - img "Google" [ref=e157]
+          - generic [ref=e158]:
+            - button "Keyboard shortcuts" [ref=e164] [cursor=pointer]
+            - generic [ref=e170]: Map data ©2025 Google, INEGI
+            - link "Terms (opens in new tab)" [ref=e175] [cursor=pointer]:
+              - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+              - text: Terms
+            - link "Report a map error" [ref=e180]:
+              - /url: https://www.google.com/maps/@30.4213,-87.2169,11z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+    - generic [ref=e182]:
+      - heading "Available Properties & Pricing" [level=2] [ref=e183]
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - heading "Gated 4-Unit Community" [level=3] [ref=e186]
+          - link "View Listing on Zillow →" [ref=e188]:
+            - /url: https://www.zillow.com/homedetails/1816-W-Gadsden-St-Pensacola-FL-32501/333074300_zpid/
+          - generic [ref=e189]:
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - heading "1810 W Gadsden" [level=4] [ref=e192]
+                - generic [ref=e193]: Pensacola, FL 32501
+              - generic [ref=e194]:
+                - generic [ref=e195]: 3 bed
+                - generic [ref=e196]: 2 bath
+                - generic [ref=e197]: $2,350/month
+              - generic [ref=e198]: + utilities
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - heading "1812 W Gadsden" [level=4] [ref=e201]
+                - generic [ref=e202]: Pensacola, FL 32501
+              - generic [ref=e203]:
+                - generic [ref=e204]: 3 bed
+                - generic [ref=e205]: 2 bath
+                - generic [ref=e206]: $2,350/month
+              - generic [ref=e207]: + utilities
+            - generic [ref=e208]:
+              - generic [ref=e209]:
+                - heading "1816 W Gadsden" [level=4] [ref=e210]
+                - generic [ref=e211]: Pensacola, FL 32501
+              - generic [ref=e212]:
+                - generic [ref=e213]: 3 bed
+                - generic [ref=e214]: 2 bath
+                - generic [ref=e215]: $2,350/month
+              - generic [ref=e216]: + utilities
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - heading "1818 W Gadsden" [level=4] [ref=e219]
+                - generic [ref=e220]: Pensacola, FL 32501
+              - generic [ref=e221]:
+                - generic [ref=e222]: 3 bed
+                - generic [ref=e223]: 2 bath
+                - generic [ref=e224]: $2,350/month
+              - generic [ref=e225]: + utilities
+          - generic [ref=e226]:
+            - strong [ref=e227]: "Utility Bundle Available:"
+            - text: $400/month (Power, Water, Sanitation, Internet)
+        - generic [ref=e228]:
+          - heading "1918 W Gadsden" [level=3] [ref=e229]
+          - link "View Listing on Zillow →" [ref=e231]:
+            - /url: https://www.zillow.com/homedetails/1918-W-Gadsden-St-A-Pensacola-FL-32501/445876690_zpid/
+          - generic [ref=e232]:
+            - generic [ref=e233]:
+              - generic [ref=e234]:
+                - heading "Unit A" [level=4] [ref=e235]
+                - generic [ref=e236]: 1918 W Gadsden, Pensacola, FL 32501
+              - generic [ref=e237]:
+                - generic [ref=e238]: 3 bed
+                - generic [ref=e239]: 2 bath
+                - generic [ref=e240]: $2,250/month
+              - generic [ref=e241]: + utilities
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - heading "Unit B" [level=4] [ref=e244]
+                - generic [ref=e245]: 1918 W Gadsden, Pensacola, FL 32501
+              - generic [ref=e246]:
+                - generic [ref=e247]: 3 bed
+                - generic [ref=e248]: 2 bath
+                - generic [ref=e249]: $2,250/month
+              - generic [ref=e250]: + utilities
+          - generic [ref=e251]:
+            - strong [ref=e252]: "Utility Bundle Available:"
+            - text: $400/month (Power, Water, Sanitation, Internet)
+        - generic [ref=e253]:
+          - heading "Yacht Harbor Dr" [level=3] [ref=e254]
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - heading "4969 Yacht Harbor Dr" [level=4] [ref=e258]
+              - generic [ref=e259]: Pensacola, FL 32514
+            - generic [ref=e260]:
+              - generic [ref=e261]: 2 bed
+              - generic [ref=e262]: 1 bath
+              - generic [ref=e263]: $1,750/month
+            - generic [ref=e264]: + utilities
+          - generic [ref=e265]:
+            - strong [ref=e266]: "Utility Bundle Available:"
+            - text: $250/month (Power, Water, Sanitation, Internet)
+        - generic [ref=e267]:
+          - heading "Rebecca Street" [level=3] [ref=e268]
+          - link "View Listing on Zillow →" [ref=e270]:
+            - /url: https://www.zillow.com/homedetails/1625-Rebecca-St-APT-B-Pensacola-FL-32534/2103741034_zpid/
+          - generic [ref=e272]:
+            - generic [ref=e273]:
+              - heading "1625 Rebecca" [level=4] [ref=e274]
+              - generic [ref=e275]: Pensacola, FL 32534
+            - generic [ref=e276]:
+              - generic [ref=e277]: 1 bed
+              - generic [ref=e278]: 1 bath
+              - generic [ref=e279]: $1,500/month
+            - generic [ref=e280]: + utilities (4 apartments available)
+          - generic [ref=e281]:
+            - strong [ref=e282]: "Utility Bundle Available:"
+            - text: $200/month (Power, Water, Sanitation, Internet)
+      - generic [ref=e283]:
+        - heading "Included in All Properties" [level=3] [ref=e284]
+        - generic [ref=e285]:
+          - generic [ref=e286]: 🌿 Landscaping
+          - generic [ref=e287]: 🐛 Pest Control
+    - generic [ref=e289]:
+      - heading "Property Details & Availability" [level=2] [ref=e290]
+      - generic [ref=e291]:
+        - heading "1625 Rebecca Street - 4 Apartments" [level=3] [ref=e292]
+        - paragraph [ref=e293]: Pensacola, FL 32534
+        - table [ref=e295]:
+          - rowgroup [ref=e296]:
+            - row "Unit Bed/Bath Rent Available Status" [ref=e297]:
+              - cell "Unit" [ref=e298]
+              - cell "Bed/Bath" [ref=e299]
+              - cell "Rent" [ref=e300]
+              - cell "Available" [ref=e301]
+              - cell "Status" [ref=e302]
+          - rowgroup [ref=e303]:
+            - row "Unit A 1 bed / 1 bath $1,500/month September 2025 Available" [ref=e304]:
+              - cell "Unit A" [ref=e305]
+              - cell "1 bed / 1 bath" [ref=e306]
+              - cell "$1,500/month" [ref=e307]
+              - cell "September 2025" [ref=e308]
+              - cell "Available" [ref=e309]
+            - row "Unit B 1 bed / 1 bath $1,500/month September 2025 Available" [ref=e310]:
+              - cell "Unit B" [ref=e311]
+              - cell "1 bed / 1 bath" [ref=e312]
+              - cell "$1,500/month" [ref=e313]
+              - cell "September 2025" [ref=e314]
+              - cell "Available" [ref=e315]
+            - row "Unit C 1 bed / 1 bath $1,500/month September 2025 Available" [ref=e316]:
+              - cell "Unit C" [ref=e317]
+              - cell "1 bed / 1 bath" [ref=e318]
+              - cell "$1,500/month" [ref=e319]
+              - cell "September 2025" [ref=e320]
+              - cell "Available" [ref=e321]
+            - row "Unit D 1 bed / 1 bath $1,500/month September 2025 Available" [ref=e322]:
+              - cell "Unit D" [ref=e323]
+              - cell "1 bed / 1 bath" [ref=e324]
+              - cell "$1,500/month" [ref=e325]
+              - cell "September 2025" [ref=e326]
+              - cell "Available" [ref=e327]
+      - generic [ref=e328]:
+        - heading "1810 W Gadsden Community - Gated 4-Unit Complex" [level=3] [ref=e329]
+        - paragraph [ref=e330]: Pensacola, FL 32501
+        - table [ref=e332]:
+          - rowgroup [ref=e333]:
+            - row "Unit Bed/Bath Rent Available Status" [ref=e334]:
+              - cell "Unit" [ref=e335]
+              - cell "Bed/Bath" [ref=e336]
+              - cell "Rent" [ref=e337]
+              - cell "Available" [ref=e338]
+              - cell "Status" [ref=e339]
+          - rowgroup [ref=e340]:
+            - row "1810 W Gadsden 3 bed / 2 bath $2,350/month February 2026 Available" [ref=e341]:
+              - cell "1810 W Gadsden" [ref=e342]
+              - cell "3 bed / 2 bath" [ref=e343]
+              - cell "$2,350/month" [ref=e344]
+              - cell "February 2026" [ref=e345]
+              - cell "Available" [ref=e346]
+            - row "1812 W Gadsden 3 bed / 2 bath $2,350/month February 2026 Available" [ref=e347]:
+              - cell "1812 W Gadsden" [ref=e348]
+              - cell "3 bed / 2 bath" [ref=e349]
+              - cell "$2,350/month" [ref=e350]
+              - cell "February 2026" [ref=e351]
+              - cell "Available" [ref=e352]
+            - row "1816 W Gadsden 3 bed / 2 bath $2,350/month September 23, 2025 Available" [ref=e353]:
+              - cell "1816 W Gadsden" [ref=e354]
+              - cell "3 bed / 2 bath" [ref=e355]
+              - cell "$2,350/month" [ref=e356]
+              - cell "September 23, 2025" [ref=e357]
+              - cell "Available" [ref=e358]
+            - row "1818 W Gadsden 3 bed / 2 bath $2,350/month November 8, 2025 Available" [ref=e359]:
+              - cell "1818 W Gadsden" [ref=e360]
+              - cell "3 bed / 2 bath" [ref=e361]
+              - cell "$2,350/month" [ref=e362]
+              - cell "November 8, 2025" [ref=e363]
+              - cell "Available" [ref=e364]
+      - generic [ref=e365]:
+        - heading "1918 W Gadsden Duplex - 2 Units" [level=3] [ref=e366]
+        - paragraph [ref=e367]: Pensacola, FL 32501
+        - table [ref=e369]:
+          - rowgroup [ref=e370]:
+            - row "Unit Bed/Bath Rent Available Status" [ref=e371]:
+              - cell "Unit" [ref=e372]
+              - cell "Bed/Bath" [ref=e373]
+              - cell "Rent" [ref=e374]
+              - cell "Available" [ref=e375]
+              - cell "Status" [ref=e376]
+          - rowgroup [ref=e377]:
+            - row "Unit A 3 bed / 2 bath $2,250/month August 2026 Available" [ref=e378]:
+              - cell "Unit A" [ref=e379]
+              - cell "3 bed / 2 bath" [ref=e380]
+              - cell "$2,250/month" [ref=e381]
+              - cell "August 2026" [ref=e382]
+              - cell "Available" [ref=e383]
+            - row "Unit B 3 bed / 2 bath $2,250/month January 1, 2026 Available" [ref=e384]:
+              - cell "Unit B" [ref=e385]
+              - cell "3 bed / 2 bath" [ref=e386]
+              - cell "$2,250/month" [ref=e387]
+              - cell "January 1, 2026" [ref=e388]
+              - cell "Available" [ref=e389]
+      - generic [ref=e390]:
+        - heading "4969 Yacht Harbor Drive - 2 Units" [level=3] [ref=e391]
+        - paragraph [ref=e392]: Pensacola, FL 32514
+        - table [ref=e394]:
+          - rowgroup [ref=e395]:
+            - row "Unit Bed/Bath Rent Available Status" [ref=e396]:
+              - cell "Unit" [ref=e397]
+              - cell "Bed/Bath" [ref=e398]
+              - cell "Rent" [ref=e399]
+              - cell "Available" [ref=e400]
+              - cell "Status" [ref=e401]
+          - rowgroup [ref=e402]:
+            - row "Unit A 2 bed / 1 bath $1,750/month February 2025 Available" [ref=e403]:
+              - cell "Unit A" [ref=e404]
+              - cell "2 bed / 1 bath" [ref=e405]
+              - cell "$1,750/month" [ref=e406]
+              - cell "February 2025" [ref=e407]
+              - cell "Available" [ref=e408]
+            - row "Unit B 2 bed / 1 bath $1,750/month February 2025 Available" [ref=e409]:
+              - cell "Unit B" [ref=e410]
+              - cell "2 bed / 1 bath" [ref=e411]
+              - cell "$1,750/month" [ref=e412]
+              - cell "February 2025" [ref=e413]
+              - cell "Available" [ref=e414]
+    - generic [ref=e416]:
+      - heading "Book Your Furnished Rental Today" [level=2] [ref=e417]
+      - generic [ref=e418]:
+        - link "Short-Term Bookings Nightly & weekly stays via Hospitable Book Now" [ref=e419]:
+          - /url: https://micasa.directstays.com/
+          - heading "Short-Term Bookings" [level=3] [ref=e420]
+          - paragraph [ref=e421]: Nightly & weekly stays via Hospitable
+          - generic [ref=e422]: Book Now
+        - link "Long-Term Leases Monthly & annual rentals via Avail Apply Now" [ref=e423]:
+          - /url: https://www.avail.co/companies/micasa
+          - heading "Long-Term Leases" [level=3] [ref=e424]
+          - paragraph [ref=e425]: Monthly & annual rentals via Avail
+          - generic [ref=e426]: Apply Now
+    - generic [ref=e428]:
+      - heading "Why Choose Mi Casa Rentals in Pensacola?" [level=2] [ref=e429]
+      - generic [ref=e430]:
+        - generic [ref=e431]:
+          - heading "🏡 Prime Pensacola Locations" [level=3] [ref=e432]
+          - paragraph [ref=e433]: Centrally located furnished apartments near downtown Pensacola, beaches, and business districts
+        - generic [ref=e434]:
+          - heading "🐕 Pet-Friendly Options" [level=3] [ref=e435]
+          - paragraph [ref=e436]: Select pet-friendly furnished rentals available for your furry family members
+        - generic [ref=e437]:
+          - heading "💼 Corporate Housing Specialists" [level=3] [ref=e438]
+          - paragraph [ref=e439]: Extended stay solutions for business travelers, relocating employees, and temporary assignments
+        - generic [ref=e440]:
+          - heading "📶 High-Speed WiFi Included" [level=3] [ref=e441]
+          - paragraph [ref=e442]: All furnished apartments include reliable internet, perfect for remote work and streaming
+    - generic [ref=e444]:
+      - heading "Get In Touch" [level=2] [ref=e445]
+      - generic [ref=e446]:
+        - generic [ref=e447]:
+          - strong [ref=e448]: "📞 Phone:"
+          - link "(850) 912-9225" [ref=e449]:
+            - /url: tel:+1-850-912-9225
+        - generic [ref=e450]:
+          - strong [ref=e451]: "✉️ Email:"
+          - link "rentalspcola@gmail.com" [ref=e452]:
+            - /url: mailto:rentalspcola@gmail.com
+  - contentinfo [ref=e453]:
+    - paragraph [ref=e455]: © 2025 Mi Casa Rentals - Pensacola, Florida. All rights reserved.
+```
