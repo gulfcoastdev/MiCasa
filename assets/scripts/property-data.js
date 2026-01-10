@@ -14,8 +14,8 @@ const propertyData = {
             utilityBundle: { price: 200, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
             amenities: ["Pergola", "Large peaceful yard"],
             units: [
-                { id: "rebecca-unit-a", name: "Unit A", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2025-09-01", status: "available" },
-                { id: "rebecca-unit-b", name: "Unit B", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2025-09-01", status: "available" },
+                { id: "rebecca-unit-a", name: "Unit A", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-09-01", status: "available" },
+                { id: "rebecca-unit-b", name: "Unit B", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-09-01", status: "available" },
                 { id: "rebecca-unit-c", name: "Unit C", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-03-30", status: "available" },
                 { id: "rebecca-unit-d", name: "Unit D", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-03-01", status: "available" }
             ]
