@@ -16,8 +16,8 @@ const propertyData = {
             units: [
                 { id: "rebecca-unit-a", name: "Unit A", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2025-09-01", status: "available" },
                 { id: "rebecca-unit-b", name: "Unit B", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2025-09-01", status: "available" },
-                { id: "rebecca-unit-c", name: "Unit C", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2025-09-01", status: "available" },
-                { id: "rebecca-unit-d", name: "Unit D", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2025-09-01", status: "available" }
+                { id: "rebecca-unit-c", name: "Unit C", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-03-30", status: "available" },
+                { id: "rebecca-unit-d", name: "Unit D", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-03-01", status: "available" }
             ]
         },
         {
@@ -33,10 +33,10 @@ const propertyData = {
             utilityBundle: { price: 400, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
             amenities: ["Garage parking (1810, 1816, 1818)", "Private parking for residents only", "Large backyard with Pergola Gazebo", "Firepit", "Grill", "Palm trees"],
             units: [
-                { id: "gadsden-1810", name: "1810 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-02-01", status: "available" },
-                { id: "gadsden-1812", name: "1812 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-02-01", status: "available" },
-                { id: "gadsden-1816", name: "1816 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2025-09-23", status: "available" },
-                { id: "gadsden-1818", name: "1818 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2025-11-08", status: "available" }
+                { id: "gadsden-1810", name: "1810 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-04-06", status: "available" },
+                { id: "gadsden-1812", name: "1812 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-04-22", status: "available" },
+                { id: "gadsden-1816", name: "1816 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-04-23", status: "available" },
+                { id: "gadsden-1818", name: "1818 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-03-22", status: "available" }
             ]
         },
         {
@@ -53,7 +53,7 @@ const propertyData = {
             amenities: ["Garage parking", "Fenced backyard"],
             units: [
                 { id: "gadsden-duplex-a", name: "Unit A", bedrooms: 3, bathrooms: 2, rent: 2250, availableDate: "2026-08-01", status: "available" },
-                { id: "gadsden-duplex-b", name: "Unit B", bedrooms: 3, bathrooms: 2, rent: 2250, availableDate: "2026-01-01", status: "available" }
+                { id: "gadsden-duplex-b", name: "Unit B", bedrooms: 3, bathrooms: 2, rent: 2250, availableDate: "2026-09-01", status: "available" }
             ]
         },
         {
@@ -68,8 +68,8 @@ const propertyData = {
             utilityBundle: { price: 250, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
             amenities: ["Large fenced backyard"],
             units: [
-                { id: "yacht-harbor-a", name: "Unit A", bedrooms: 2, bathrooms: 1, rent: 1750, availableDate: "2026-02-01", status: "available" },
-                { id: "yacht-harbor-b", name: "Unit B", bedrooms: 2, bathrooms: 1, rent: 1750, availableDate: "2026-02-01", status: "available" }
+                { id: "yacht-harbor-a", name: "Unit A", bedrooms: 2, bathrooms: 1, rent: 1750, availableDate: "2026-09-01", status: "available" },
+                { id: "yacht-harbor-b", name: "Unit B", bedrooms: 2, bathrooms: 1, rent: 1750, availableDate: "2026-05-01", status: "available" }
             ]
         }
     ],
