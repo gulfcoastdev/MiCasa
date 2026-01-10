@@ -356,6 +356,61 @@ function showMapFallback() {
     if (fallbackElement) fallbackElement.style.display = 'flex';
 }
 
+// Filter properties by bedroom count
+function filterPropertiesByBedrooms(bedroomCount) {
+    if (bedroomCount === 'all') {
+        return propertyData.properties;
+    }
+
+    const count = parseInt(bedroomCount);
+    return propertyData.properties.filter(property => {
+        return property.units.some(unit => unit.bedrooms === count);
+    });
+}
+
+// Render filtered properties
+function renderFilteredProperties(bedroomCount) {
+    const propertiesContainer = document.getElementById('properties-container');
+    const filterResultsInfo = document.getElementById('filter-results');
+
+    if (!propertiesContainer) return;
+
+    const filteredProperties = filterPropertiesByBedrooms(bedroomCount);
+
+    if (filteredProperties.length === 0) {
+        propertiesContainer.innerHTML = '<p style="text-align: center; padding: 40px; color: #5a7a95; font-size: 1.1rem;">No properties found with the selected criteria.</p>';
+        if (filterResultsInfo) {
+            filterResultsInfo.textContent = 'No properties match your search';
+        }
+    } else {
+        const propertiesHTML = filteredProperties.map(property => renderProperty(property)).join('');
+        propertiesContainer.innerHTML = propertiesHTML;
+
+        if (filterResultsInfo) {
+            const totalUnits = filteredProperties.reduce((sum, prop) => {
+                if (bedroomCount === 'all') {
+                    return sum + prop.units.length;
+                } else {
+                    const count = parseInt(bedroomCount);
+                    return sum + prop.units.filter(unit => unit.bedrooms === count).length;
+                }
+            }, 0);
+
+            if (bedroomCount === 'all') {
+                filterResultsInfo.textContent = `Showing all ${filteredProperties.length} properties with ${totalUnits} total units`;
+            } else {
+                filterResultsInfo.textContent = `Found ${filteredProperties.length} ${filteredProperties.length === 1 ? 'property' : 'properties'} with ${totalUnits} ${bedroomCount}-bedroom ${totalUnits === 1 ? 'unit' : 'units'}`;
+            }
+        }
+    }
+
+    // Scroll to properties section
+    const propertyDetailsSection = document.querySelector('.property-details-section');
+    if (propertyDetailsSection) {
+        propertyDetailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Render properties
@@ -375,6 +430,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const socialMediaContainer = document.getElementById('social-media-container');
     if (socialMediaContainer) {
         socialMediaContainer.innerHTML = renderSocialMedia();
+    }
+
+    // Set up bedroom filter buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Get bedroom count and filter
+            const bedroomCount = this.getAttribute('data-bedrooms');
+            renderFilteredProperties(bedroomCount);
+        });
+    });
+
+    // Initialize filter results info
+    const filterResultsInfo = document.getElementById('filter-results');
+    if (filterResultsInfo) {
+        const totalUnits = propertyData.properties.reduce((sum, prop) => sum + prop.units.length, 0);
+        filterResultsInfo.textContent = `Showing all ${propertyData.properties.length} properties with ${totalUnits} total units`;
     }
 
     console.log('Property data loaded and rendered successfully');

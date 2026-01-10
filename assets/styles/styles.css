@@ -562,6 +562,70 @@ body {
     font-size: 0.9rem;
 }
 
+/* Filter Section */
+.filter-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+    border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.filter-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1a5490;
+}
+
+.filter-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #5a7a95;
+    margin-bottom: 30px;
+}
+
+.bedroom-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a5490;
+    background: white;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
+}
+
+.filter-btn:hover {
+    background: #ebf8ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border-color: #2980b9;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.filter-results-info {
+    text-align: center;
+    font-size: 1rem;
+    color: #3498db;
+    font-weight: 600;
+    margin-top: 15px;
+    min-height: 24px;
+}
+
 /* Pricing Section */
 .pricing-section {
     padding: 80px 0;
@@ -1329,12 +1393,30 @@ footer p {
         height: 10px;
     }
     
-    .description, .cta-section, .contact, .map-section, .pricing-section, .amenities-section {
+    .description, .cta-section, .contact, .map-section, .filter-section, .pricing-section, .amenities-section {
         padding: 60px 0;
     }
-    
-    .description h2, .cta-section h2, .contact h2, .map-section h2, .pricing-section h2, .amenities-section h2, .property-details-section h2, .benefits h2 {
+
+    .description h2, .cta-section h2, .contact h2, .map-section h2, .filter-section h2, .pricing-section h2, .amenities-section h2, .property-details-section h2, .benefits h2 {
         font-size: 1.6rem;
+    }
+
+    .filter-section {
+        padding: 40px 0;
+    }
+
+    .filter-intro {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .bedroom-filter {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
     
     
