@@ -28,7 +28,9 @@
 <section id="benefits" class="benefits">
     <div class="container">
         <h2>Why Choose Mi Casa Rentals in Pensacola?</h2>
-        <p class="benefits-intro">Experience the difference with our premium furnished rental service in Pensacola</p>
+        <p class="benefits-intro">Each fully furnished apartment includes modern furnishings, utilities, and everything needed for a seamless stay—perfect for temporary assignments or longer-term living. With years of successful hosting and consistently excellent guest reviews, we specialize in both short-term furnished rentals and long-term leases throughout Pensacola.</p>
+
+        <p class="benefits-intro">Whether you're relocating, on assignment, or simply looking for a high-quality furnished apartment in Pensacola, our professionally managed rentals provide a reliable, stress-free housing solution in great locations.</p>
         <div class="benefits-grid">
             <div class="benefit-card">
                 <div class="benefit-icon">✨</div>
