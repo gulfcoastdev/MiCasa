@@ -1,13 +1,22 @@
+<?php
+// Detect current page
+$current_page = basename($_SERVER['PHP_SELF']);
+$is_home = ($current_page === 'index.php');
+
+// Set base URL for navigation
+$nav_base = $is_home ? '' : 'index.php';
+?>
+
 <!-- Header with Logo -->
 <header class="site-header">
     <div class="container">
         <div class="header-wrapper">
-            <div class="logo-container">
+            <a href="index.php" class="logo-container">
                 <img id="site-logo" src="" alt="Mi Casa Rentals" class="logo hidden">
                 <div class="header-text">
                     <h1 class="logo-text">Mi Casa Rentals</h1>
                 </div>
-            </div>
+            </a>
 
             <div class="header-contact">
                 <a href="tel:+1-850-912-9225" class="header-contact-link">
@@ -26,11 +35,11 @@
                     <span class="hamburger"></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="#hero" class="nav-link">Home</a></li>
-                    <li><a href="#properties" class="nav-link">Properties</a></li>
-                    <li><a href="#filter" class="nav-link">Find Rental</a></li>
-                    <li><a href="#benefits" class="nav-link">Why Choose Us</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="<?php echo $nav_base; ?>#hero" class="nav-link">Home</a></li>
+                    <li><a href="<?php echo $nav_base; ?>#properties" class="nav-link">Properties</a></li>
+                    <li><a href="<?php echo $nav_base; ?>#filter" class="nav-link">Find Rental</a></li>
+                    <li><a href="<?php echo $nav_base; ?>#benefits" class="nav-link">Why Choose Us</a></li>
+                    <li><a href="<?php echo $nav_base; ?>#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>

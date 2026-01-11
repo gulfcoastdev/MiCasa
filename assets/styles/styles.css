@@ -49,6 +49,13 @@ body {
     padding: 15px 0;
     min-height: 60px;
     visibility: visible !important;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo-container:hover .logo-text {
+    color: #14406e;
 }
 
 .logo {
