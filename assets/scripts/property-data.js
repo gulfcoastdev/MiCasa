@@ -3,25 +3,81 @@ const propertyData = {
     properties: [
         {
             id: "rebecca-street",
+            slug: "rebecca-street",
             name: "1625 Rebecca Street",
             address: "1625 Rebecca Street, Pensacola, FL 32534",
+            location: { city: "Pensacola", state: "FL" },
             description: "4 Apartments",
+            fullDescription: "Charming 4-unit apartment complex featuring fully furnished 1-bedroom units in a quiet Pensacola neighborhood. Perfect for military personnel, travel nurses, and professionals seeking comfortable monthly rentals.",
             squareFootage: 550,
             image: "assets/slider/image1.jpeg",
+            heroVideo: null, // Set to video URL when available
             listingUrl: "https://www.avail.co/l/61109049",
+            bookingUrl: "https://www.avail.co/l/61109049",
             coordinates: { lat: 30.530505377105996, lng: -87.2915285663669 },
             mapInfo: { title: "1625 Rebecca St", type: "apartments" },
+            petPolicy: "No pets",
+            parking: "Street parking",
             utilityBundle: { price: 200, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
-            amenities: ["Pergola", "Large peaceful yard"],
+            amenities: ["Pergola", "Large peaceful yard", "Fully furnished", "All utilities included option"],
             units: [
-                { id: "rebecca-unit-a", name: "Unit A", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-09-01", status: "available" },
-                { id: "rebecca-unit-b", name: "Unit B", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-09-01", status: "available" },
-                { id: "rebecca-unit-c", name: "Unit C", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-03-30", status: "available" },
-                { id: "rebecca-unit-d", name: "Unit D", bedrooms: 1, bathrooms: 1, rent: 1500, availableDate: "2026-03-01", status: "available" }
+                {
+                    id: "rebecca-unit-a",
+                    name: "Unit A",
+                    bedrooms: 1,
+                    bathrooms: 1,
+                    rent: 1500,
+                    sleeps: 2,
+                    availableDate: "2026-09-01",
+                    status: "available",
+                    images: ["assets/slider/image1.jpeg", "assets/slider/image2.jpeg"],
+                    videoTour: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Example - replace with actual video
+                    bookingUrl: "https://www.avail.co/l/61109049"
+                },
+                {
+                    id: "rebecca-unit-b",
+                    name: "Unit B",
+                    bedrooms: 1,
+                    bathrooms: 1,
+                    rent: 1500,
+                    sleeps: 2,
+                    availableDate: "2026-09-01",
+                    status: "available",
+                    images: ["assets/slider/image1.jpeg"],
+                    videoTour: null,
+                    bookingUrl: "https://www.avail.co/l/61109049"
+                },
+                {
+                    id: "rebecca-unit-c",
+                    name: "Unit C",
+                    bedrooms: 1,
+                    bathrooms: 1,
+                    rent: 1500,
+                    sleeps: 2,
+                    availableDate: "2026-03-30",
+                    status: "available",
+                    images: ["assets/slider/image1.jpeg"],
+                    videoTour: null,
+                    bookingUrl: "https://www.avail.co/l/61109049"
+                },
+                {
+                    id: "rebecca-unit-d",
+                    name: "Unit D",
+                    bedrooms: 1,
+                    bathrooms: 1,
+                    rent: 1500,
+                    sleeps: 2,
+                    availableDate: "2026-03-01",
+                    status: "available",
+                    images: ["assets/slider/image1.jpeg"],
+                    videoTour: null,
+                    bookingUrl: "https://www.avail.co/l/61109049"
+                }
             ]
         },
         {
             id: "gadsden-community",
+            slug: "gadsden-community",
             name: "1810 W Gadsden Community",
             address: "1810 W Gadsden Community, Pensacola, FL 32501",
             description: "Gated 4-Unit Complex",
@@ -41,6 +97,7 @@ const propertyData = {
         },
         {
             id: "gadsden-duplex",
+            slug: "gadsden-duplex",
             name: "1918 W Gadsden Duplex",
             address: "1918 W Gadsden Duplex, Pensacola, FL 32501",
             description: "2 Units",
@@ -58,6 +115,7 @@ const propertyData = {
         },
         {
             id: "yacht-harbor",
+            slug: "yacht-harbor",
             name: "4969 Yacht Harbor Drive",
             address: "4969 Yacht Harbor Drive, Pensacola, FL 32514",
             description: "2 Units",
@@ -142,13 +200,18 @@ function renderProperty(property) {
                     <h3>${property.name} - ${property.description}</h3>
                     <p class="property-address">${property.address}</p>
                     <div class="square-footage">${property.squareFootage} sq ft per unit</div>
-                    ${property.listingUrl ? `
-                        <div class="property-listing-link">
-                            <a href="${property.listingUrl}" target="_blank" class="listing-link">
-                                More Info & Photos →
+                    <div class="property-links">
+                        ${property.slug ? `
+                            <a href="property.php?slug=${property.slug}" class="listing-link view-details-link">
+                                View Full Details →
                             </a>
-                        </div>
-                    ` : ''}
+                        ` : ''}
+                        ${property.listingUrl ? `
+                            <a href="${property.listingUrl}" target="_blank" class="listing-link">
+                                Book Now →
+                            </a>
+                        ` : ''}
+                    </div>
                 </div>
             </div>
             <div class="availability-table">
@@ -460,3 +523,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Map initialization - will be called by Google Maps API when ready
 window.initMap = initMap;
+
+// Get property by slug (for property detail pages)
+function getPropertyBySlug(slug) {
+    return propertyData.properties.find(p => p.slug === slug || p.id === slug);
+}
+
+// Make property data globally accessible
+window.propertyData = propertyData;
+window.getPropertyBySlug = getPropertyBySlug;

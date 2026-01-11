@@ -853,6 +853,14 @@ body {
     margin-bottom: 20px;
 }
 
+.property-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
 .listing-link {
     display: inline-block;
     background: linear-gradient(135deg, #3498db 0%, #1abc9c 100%);
@@ -870,6 +878,14 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
     background: linear-gradient(135deg, #2980b9 0%, #16a085 100%);
+}
+
+.view-details-link {
+    background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+}
+
+.view-details-link:hover {
+    background: linear-gradient(135deg, #14406e 0%, #1e2a3a 100%);
 }
 
 .property-cards {
