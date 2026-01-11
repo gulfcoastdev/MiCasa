@@ -23,7 +23,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="hero" class="hero">
             <!-- Image Slider - Content loaded dynamically by JavaScript -->
             <div class="slider">
                 <!-- Slides, navigation arrows, and dots will be generated automatically -->
@@ -72,7 +72,7 @@
         </section>
 
         <!-- Bedroom Filter Section -->
-        <section class="filter-section">
+        <section id="filter" class="filter-section">
             <div class="container">
                 <h2>Find Your Perfect Rental</h2>
                 <p class="filter-intro">Filter properties by number of bedrooms</p>
@@ -87,7 +87,7 @@
         </section>
 
         <!-- Property Details, Amenities & Availability Section -->
-        <section class="property-details-section">
+        <section id="properties" class="property-details-section">
             <div class="container">
                 <h2>Property Details, Amenities & Availability</h2>
 
@@ -115,6 +115,7 @@
 
     <?php include 'components/footer.php'; ?>
 
+    <script src="assets/scripts/navigation.js"></script>
     <script src="assets/scripts/clean-slider.js"></script>
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/property-data.js"></script>

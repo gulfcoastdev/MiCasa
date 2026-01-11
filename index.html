@@ -29,6 +29,21 @@
                         <h1 class="logo-text">Mi Casa Rentals</h1>
                     </div>
                 </div>
+
+                <!-- Navigation Menu -->
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#hero" class="nav-link">Home</a></li>
+                        <li><a href="#properties" class="nav-link">Properties</a></li>
+                        <li><a href="#filter" class="nav-link">Find Rental</a></li>
+                        <li><a href="#benefits" class="nav-link">Why Choose Us</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
                 <div class="header-contact">
                     <a href="tel:+1-850-912-9225" class="header-contact-link">
                         <span class="contact-icon">📞</span>
@@ -45,7 +60,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="hero" class="hero">
             <!-- Image Slider - Content loaded dynamically by JavaScript -->
             <div class="slider">
                 <!-- Slides, navigation arrows, and dots will be generated automatically -->
@@ -94,7 +109,7 @@
         </section>
 
         <!-- Bedroom Filter Section -->
-        <section class="filter-section">
+        <section id="filter" class="filter-section">
             <div class="container">
                 <h2>Find Your Perfect Rental</h2>
                 <p class="filter-intro">Filter properties by number of bedrooms</p>
@@ -109,7 +124,7 @@
         </section>
 
         <!-- Property Details, Amenities & Availability Section -->
-        <section class="property-details-section">
+        <section id="properties" class="property-details-section">
             <div class="container">
                 <h2>Property Details, Amenities & Availability</h2>
 
@@ -159,7 +174,7 @@
         </section>
 
         <!-- Benefits Section -->
-        <section class="benefits">
+        <section id="benefits" class="benefits">
             <div class="container">
                 <h2>Why Choose Mi Casa Rentals in Pensacola?</h2>
                 <p class="benefits-intro">Experience the difference with our premium furnished rental service in Pensacola</p>
@@ -218,7 +233,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="container">
                 <h2>Get In Touch</h2>
                 <p class="contact-intro">Ready to book your furnished apartment in Pensacola? We're here to help!</p>
@@ -285,6 +300,7 @@
         </div>
     </footer>
 
+    <script src="assets/scripts/navigation.js"></script>
     <script src="assets/scripts/clean-slider.js"></script>
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/property-data.js"></script>

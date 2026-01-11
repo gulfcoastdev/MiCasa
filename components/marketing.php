@@ -25,7 +25,7 @@
 </section>
 
 <!-- Benefits Section -->
-<section class="benefits">
+<section id="benefits" class="benefits">
     <div class="container">
         <h2>Why Choose Mi Casa Rentals in Pensacola?</h2>
         <p class="benefits-intro">Experience the difference with our premium furnished rental service in Pensacola</p>
@@ -84,7 +84,7 @@
 </section>
 
 <!-- Contact Section -->
-<section class="contact">
+<section id="contact" class="contact">
     <div class="container">
         <h2>Get In Touch</h2>
         <p class="contact-intro">Ready to book your furnished apartment in Pensacola? We're here to help!</p>

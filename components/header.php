@@ -8,6 +8,21 @@
                     <h1 class="logo-text">Mi Casa Rentals</h1>
                 </div>
             </div>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#properties" class="nav-link">Properties</a></li>
+                    <li><a href="#filter" class="nav-link">Find Rental</a></li>
+                    <li><a href="#benefits" class="nav-link">Why Choose Us</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
             <div class="header-contact">
                 <a href="tel:+1-850-912-9225" class="header-contact-link">
                     <span class="contact-icon">📞</span>
