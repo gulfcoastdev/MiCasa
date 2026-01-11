@@ -1566,30 +1566,14 @@ footer p {
     }
 
     .header-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         gap: 10px;
     }
 
     .header-contact {
-        width: 100%;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .header-contact-link {
-        width: 100%;
-        justify-content: center;
-        font-size: 0.85rem;
-        padding: 0 !important;
-        background: none !important;
-        background-color: transparent !important;
-    }
-
-    .header-contact-link .contact-info {
-        font-size: 0.85rem;
-        background: none !important;
-        background-color: transparent !important;
+        display: none;
     }
 
     .hero {
