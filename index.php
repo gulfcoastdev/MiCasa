@@ -7,16 +7,7 @@
     <meta name="description" content="Fully furnished apartments in Pensacola FL for short-term stays and long-term leases. Move-in ready corporate housing with WiFi. Book online or apply today!">
     <link rel="stylesheet" href="assets/styles/styles.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JPY4MQ7H9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-1JPY4MQ7H9');
-      gtag('config', 'AW-17414151203');
-    </script>
+    <?php include 'components/analytics.php'; ?>
 </head>
 <body>
     <?php include 'components/header.php'; ?>
