@@ -403,34 +403,33 @@ body {
 
 /* Military Discount Banner Section */
 .military-banner-section {
-    padding: 30px 0;
+    padding: 0;
     background: #f7f9fc;
-    text-align: center;
 }
 
 .military-discount-banner {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 15px;
     background: linear-gradient(135deg, #dc3545 0%, #b92b37 100%);
-    padding: 15px 30px;
-    border-radius: 50px;
-    box-shadow: 0 6px 25px rgba(220, 53, 69, 0.4);
-    border: 2px solid rgba(220, 53, 69, 0.8);
+    padding: 40px 20px;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(220, 53, 69, 0.3);
     animation: pulse-glow 3s ease-in-out infinite;
 }
 
 @keyframes pulse-glow {
     0%, 100% {
-        box-shadow: 0 6px 25px rgba(220, 53, 69, 0.4);
+        box-shadow: 0 4px 20px rgba(220, 53, 69, 0.3);
     }
     50% {
-        box-shadow: 0 8px 35px rgba(220, 53, 69, 0.6);
+        box-shadow: 0 6px 30px rgba(220, 53, 69, 0.5);
     }
 }
 
 .military-icon {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1;
     animation: wave 2s ease-in-out infinite;
 }
@@ -449,14 +448,15 @@ body {
 
 .military-text {
     color: white;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.4;
 }
 
 .military-text strong {
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
 }
 
 /* Slider Styles */
@@ -1905,29 +1905,28 @@ footer p {
     }
 
     .military-banner-section {
-        padding: 20px 0;
+        padding: 0;
     }
 
     .military-discount-banner {
-        padding: 12px 20px;
+        padding: 30px 15px;
         flex-direction: column;
-        gap: 8px;
-        margin: 0 10px;
+        gap: 10px;
     }
 
     .military-icon {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .military-text {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         text-align: center;
     }
 
     .military-text strong {
-        font-size: 1rem;
+        font-size: 1.3rem;
         display: block;
-        margin-top: 4px;
+        margin-top: 5px;
     }
 
     .slider-arrow {
