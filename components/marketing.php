@@ -79,6 +79,13 @@
                     <p>High-speed internet available for all furnished apartments (not included in rent)</p>
                 </div>
             </div>
+            <div class="benefit-card military-benefit">
+                <div class="benefit-icon">🇺🇸</div>
+                <div class="benefit-content">
+                    <h3>Military & Veterans Discount</h3>
+                    <p>Thank you for your service! Active military and veterans receive 10% off all rentals</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
