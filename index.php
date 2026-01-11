@@ -36,7 +36,7 @@
                 <!-- Military Discount Banner -->
                 <div class="military-discount-banner">
                     <span class="military-icon">🇺🇸</span>
-                    <span class="military-text">Proud to serve those who served! <strong>Military & Veterans receive 10% off</strong></span>
+                    <span class="military-text">Proud to serve those who served! <strong>Special discounts for Military & Veterans</strong></span>
                 </div>
 
                 <!-- Contact Info in Hero -->

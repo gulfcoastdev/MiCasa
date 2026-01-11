@@ -83,7 +83,7 @@
                 <div class="benefit-icon">🇺🇸</div>
                 <div class="benefit-content">
                     <h3>Military & Veterans Discount</h3>
-                    <p>Thank you for your service! Active military and veterans receive 10% off all rentals</p>
+                    <p>Thank you for your service! We offer special discounts for active military and veterans</p>
                 </div>
             </div>
         </div>
