@@ -1345,6 +1345,162 @@ body {
     font-weight: 600;
 }
 
+/* Video Tour Styles */
+.video-tour-cell {
+    text-align: center;
+}
+
+.video-tour-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #1a5490;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ebf8ff 0%, #f0f9ff 100%);
+    border: 2px solid #1a5490;
+    transition: all 0.3s ease;
+}
+
+.video-tour-link:hover {
+    background: linear-gradient(135deg, #d6f0ff 0%, #e3f4ff 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 84, 144, 0.2);
+}
+
+.no-video {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+/* Video Modal */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.video-modal-content {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f44336;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    line-height: 1;
+}
+
+.video-modal-close:hover {
+    background: #d32f2f;
+    transform: rotate(90deg);
+}
+
+.video-modal-title {
+    font-size: 1.5rem;
+    color: #1a5490;
+    margin: 0 0 20px 0;
+    padding-right: 50px;
+}
+
+.video-modal-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+}
+
+.video-modal-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile Responsive for Video Modal */
+@media (max-width: 768px) {
+    .video-modal {
+        padding: 10px;
+    }
+
+    .video-modal-content {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .video-modal-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .video-modal-close {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+    }
+
+    .video-tour-link {
+        font-size: 0.85rem;
+        padding: 5px 12px;
+    }
+}
+
 .amenities-list {
     list-style: none;
     padding: 0;

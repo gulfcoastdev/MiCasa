@@ -11,7 +11,8 @@ const propertyData = {
             fullDescription: "Charming 4-unit apartment complex featuring fully furnished 1-bedroom units in a quiet Pensacola neighborhood. Perfect for military personnel, travel nurses, and professionals seeking comfortable monthly rentals.",
             squareFootage: 550,
             image: "assets/slider/image1.jpeg",
-            heroVideo: null, // Set to video URL when available
+            heroVideo: null,
+            propertyVideoTour: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Sample - replace with actual tour
             listingUrl: "https://www.avail.co/l/61109049",
             bookingUrl: "https://www.avail.co/l/61109049",
             coordinates: { lat: 30.530505377105996, lng: -87.2915285663669 },
@@ -80,10 +81,17 @@ const propertyData = {
             slug: "gadsden-community",
             name: "1810 W Gadsden Community",
             address: "1810 W Gadsden Community, Pensacola, FL 32501",
+            location: { city: "Pensacola", state: "FL" },
             description: "Gated 4-Unit Complex",
+            fullDescription: "Exclusive gated community featuring four spacious 3-bedroom units with garage parking and beautiful outdoor amenities.",
             squareFootage: 1600,
             image: "assets/slider/image6.jpeg",
+            heroVideo: null,
+            propertyVideoTour: "https://www.youtube.com/embed/ScMzIvxBSi4", // Sample - replace with actual tour
             listingUrl: "https://www.avail.co/l/60590948",
+            bookingUrl: "https://www.avail.co/l/60590948",
+            petPolicy: "Contact for details",
+            parking: "Garage parking",
             coordinates: { lat: 30.419862779865245, lng: -87.23847799627355 },
             mapInfo: { title: "1810 W Gadsden Community", type: "gated" },
             utilityBundle: { price: 400, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
@@ -100,10 +108,17 @@ const propertyData = {
             slug: "gadsden-duplex",
             name: "1918 W Gadsden Duplex",
             address: "1918 W Gadsden Duplex, Pensacola, FL 32501",
+            location: { city: "Pensacola", state: "FL" },
             description: "2 Units",
+            fullDescription: "Spacious 3-bedroom duplex units with garage parking and private fenced backyard.",
             squareFootage: 1200,
             image: "assets/slider/image7.jpeg",
+            heroVideo: null,
+            propertyVideoTour: null, // No video tour available
             listingUrl: "https://www.avail.co/l/60493799",
+            bookingUrl: "https://www.avail.co/l/60493799",
+            petPolicy: "Contact for details",
+            parking: "Garage parking",
             coordinates: { lat: 30.420321286721673, lng: -87.23991679528676 },
             mapInfo: { title: "1918 W Gadsden Duplex", type: "duplex" },
             utilityBundle: { price: 400, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
@@ -118,9 +133,17 @@ const propertyData = {
             slug: "yacht-harbor",
             name: "4969 Yacht Harbor Drive",
             address: "4969 Yacht Harbor Drive, Pensacola, FL 32514",
+            location: { city: "Pensacola", state: "FL" },
             description: "2 Units",
+            fullDescription: "Comfortable 2-bedroom duplex units with large fenced backyard, perfect for families or professionals.",
             squareFootage: 850,
             image: "assets/slider/image5.jpeg",
+            heroVideo: null,
+            propertyVideoTour: "https://www.youtube.com/embed/jNQXAC9IVRw", // Sample - replace with actual tour
+            listingUrl: "https://www.avail.co/companies/micasa",
+            bookingUrl: "https://www.avail.co/companies/micasa",
+            petPolicy: "Contact for details",
+            parking: "Driveway parking",
             coordinates: { lat: 30.514003753877137, lng: -87.17162733479648 },
             mapInfo: { title: "4969 Yacht Harbor Dr", type: "single" },
             utilityBundle: { price: 250, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
@@ -178,13 +201,23 @@ function getAmenityIcon(amenity) {
 
 // Render property HTML
 function renderProperty(property) {
+    const hasVideoTour = property.propertyVideoTour || property.units.some(u => u.videoTour);
+
     const unitsTableHTML = property.units.map(unit => `
         <tr>
             <td>${unit.name}</td>
             <td>${unit.bedrooms} bed / ${unit.bathrooms} bath</td>
             <td>${formatCurrency(unit.rent)}/month</td>
             <td>${formatAvailabilityDate(unit.availableDate)}</td>
-            <td class="status-available">${unit.status.charAt(0).toUpperCase() + unit.status.slice(1)}</td>
+            ${hasVideoTour ? `
+                <td class="video-tour-cell">
+                    ${property.propertyVideoTour || unit.videoTour ? `
+                        <a href="#" class="video-tour-link" onclick="openVideoTour('${property.propertyVideoTour || unit.videoTour}', '${property.name}'); return false;">
+                            🎥 Watch Tour
+                        </a>
+                    ` : '<span class="no-video">—</span>'}
+                </td>
+            ` : ''}
         </tr>
     `).join('');
 
@@ -222,7 +255,7 @@ function renderProperty(property) {
                             <th>Bed/Bath</th>
                             <th>Rent</th>
                             <th>Available</th>
-                            <th>Status</th>
+                            ${hasVideoTour ? '<th>Video Tour</th>' : ''}
                         </tr>
                     </thead>
                     <tbody>
@@ -529,6 +562,40 @@ function getPropertyBySlug(slug) {
     return propertyData.properties.find(p => p.slug === slug || p.id === slug);
 }
 
+// Video Tour Modal Functions
+function openVideoTour(videoUrl, propertyName) {
+    const modal = document.getElementById('video-tour-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+    const title = document.getElementById('video-modal-title');
+
+    if (modal && iframe && title) {
+        title.textContent = `${propertyName} - Virtual Tour`;
+        iframe.src = videoUrl;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+}
+
+function closeVideoTour() {
+    const modal = document.getElementById('video-tour-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+
+    if (modal && iframe) {
+        modal.style.display = 'none';
+        iframe.src = ''; // Stop video playback
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeVideoTour();
+    }
+});
+
 // Make property data globally accessible
 window.propertyData = propertyData;
 window.getPropertyBySlug = getPropertyBySlug;
+window.openVideoTour = openVideoTour;
+window.closeVideoTour = closeVideoTour;
