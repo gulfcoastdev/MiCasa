@@ -1350,25 +1350,29 @@ body {
     text-align: center;
 }
 
-.video-tour-link {
+.video-tour-btn-table {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     color: #1a5490;
-    text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
     background: linear-gradient(135deg, #ebf8ff 0%, #f0f9ff 100%);
     border: 2px solid #1a5490;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.video-tour-link:hover {
+.video-tour-btn-table:hover {
     background: linear-gradient(135deg, #d6f0ff 0%, #e3f4ff 100%);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(26, 84, 144, 0.2);
+}
+
+.video-icon {
+    font-size: 1.1rem;
 }
 
 .no-video {
@@ -1495,9 +1499,9 @@ body {
         font-size: 1.5rem;
     }
 
-    .video-tour-link {
+    .video-tour-btn-table {
         font-size: 0.85rem;
-        padding: 5px 12px;
+        padding: 6px 12px;
     }
 }
 

@@ -119,6 +119,12 @@ function renderPropertyOverview(property) {
             <div class="container">
                 <div class="overview-description">
                     <p>${property.fullDescription || property.description}</p>
+                    ${property.propertyVideoTour ? `
+                        <button class="video-tour-btn property-video-btn" onclick="openVideoTour('${property.propertyVideoTour}', '${property.name} - Property Tour')">
+                            <span class="video-icon">🎥</span>
+                            Watch Property Video Tour
+                        </button>
+                    ` : ''}
                 </div>
 
                 <div class="key-facts">
@@ -300,21 +306,10 @@ function renderUnitCard(unit, index, property) {
                 </div>
 
                 ${unit.videoTour ? `
-                    <button class="video-toggle-btn" onclick="toggleUnitVideo('${unit.id}')">
-                        <span class="video-icon">▶</span>
+                    <button class="video-tour-btn" onclick="openVideoTour('${unit.videoTour}', '${unit.name} - Virtual Tour')">
+                        <span class="video-icon">🎥</span>
                         Watch Video Tour
                     </button>
-                    <div id="video-${unit.id}" class="unit-video-container" style="display: none;">
-                        <div class="video-wrapper">
-                            <iframe
-                                src="${unit.videoTour}"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                                loading="lazy"
-                            ></iframe>
-                        </div>
-                    </div>
                 ` : ''}
 
                 <a href="${unit.bookingUrl || property.bookingUrl}" target="_blank" class="btn btn-unit-book">
@@ -341,23 +336,38 @@ function renderCTASection(property) {
 
 // Interactive Functions
 
-function toggleUnitVideo(unitId) {
-    const videoContainer = document.getElementById(`video-${unitId}`);
-    const btn = event.target.closest('.video-toggle-btn');
+function openVideoTour(videoUrl, title) {
+    const modal = document.getElementById('video-tour-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+    const modalTitle = document.getElementById('video-modal-title');
 
-    if (videoContainer.style.display === 'none') {
-        videoContainer.style.display = 'block';
-        btn.innerHTML = '<span class="video-icon">✕</span> Close Video';
-        btn.classList.add('active');
-    } else {
-        videoContainer.style.display = 'none';
-        btn.innerHTML = '<span class="video-icon">▶</span> Watch Video Tour';
-        btn.classList.remove('active');
-    }
+    modalTitle.textContent = title;
+    iframe.src = videoUrl;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
 }
 
+function closeVideoTour() {
+    const modal = document.getElementById('video-tour-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+
+    modal.style.display = 'none';
+    iframe.src = ''; // Stop video playback
+    document.body.style.overflow = '';
+}
+
+// ESC key to close modal
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('video-tour-modal');
+        if (modal && modal.style.display === 'flex') {
+            closeVideoTour();
+        }
+    }
+});
+
 function initializeVideoToggles() {
-    // Video toggles are handled by onclick events
+    // Video modal is handled by openVideoTour and closeVideoTour functions
 }
 
 function initializeUnitSliders() {
@@ -446,7 +456,8 @@ function switchLayout(layout) {
 }
 
 // Make functions globally accessible
-window.toggleUnitVideo = toggleUnitVideo;
+window.openVideoTour = openVideoTour;
+window.closeVideoTour = closeVideoTour;
 window.navigateHeroSlider = navigateHeroSlider;
 window.navigateUnitSlider = navigateUnitSlider;
 window.goToUnitSlide = goToUnitSlide;

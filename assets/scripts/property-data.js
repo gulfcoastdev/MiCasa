@@ -212,9 +212,10 @@ function renderProperty(property) {
             ${hasVideoTour ? `
                 <td class="video-tour-cell">
                     ${property.propertyVideoTour || unit.videoTour ? `
-                        <a href="#" class="video-tour-link" onclick="openVideoTour('${property.propertyVideoTour || unit.videoTour}', '${property.name}'); return false;">
-                            🎥 Watch Tour
-                        </a>
+                        <button class="video-tour-btn-table" onclick="openVideoTour('${property.propertyVideoTour || unit.videoTour}', '${property.name}')">
+                            <span class="video-icon">🎥</span>
+                            Watch Video Tour
+                        </button>
                     ` : '<span class="no-video">—</span>'}
                 </td>
             ` : ''}
