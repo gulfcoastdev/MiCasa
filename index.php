@@ -120,7 +120,9 @@
     <script src="assets/scripts/clean-slider.js"></script>
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/video-modal.js"></script>
-    <script src="assets/scripts/property-data.js"></script>
+    <script src="assets/scripts/data/property-data.js"></script>
+    <script src="assets/scripts/utils/formatters.js"></script>
+    <script src="assets/scripts/pages/main-page.js"></script>
     <script src="assets/scripts/contact-form.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5zmwFcxCvFrMChrVpA3AcoBRXDgEb8b8&loading=async&libraries=marker&callback=initMap"></script>
 </body>
