@@ -205,7 +205,7 @@ function renderSocialMedia() {
     if (!socialMedia) return '';
 
     return `
-        <h3 style="text-align: center; margin-bottom: 20px; color: #1a5490;">Follow Us</h3>
+        <h3 style="text-align: center; margin-bottom: 20px; color: white;">Follow Us</h3>
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
             ${socialMedia.facebook ? `
                 <a href="${socialMedia.facebook}" target="_blank" class="social-media-button facebook">
