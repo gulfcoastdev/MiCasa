@@ -140,3 +140,13 @@ vite.config.ts.timestamp-*
 
 # Claude Code configuration
 .claude/
+
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
