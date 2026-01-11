@@ -33,12 +33,6 @@
                 <h1 class="hero-title">Furnished Rentals in Pensacola, Florida</h1>
                 <p class="hero-subtitle">Move-in ready apartments for short-term stays and long-term leases in beautiful Pensacola</p>
 
-                <!-- Military Discount Banner -->
-                <div class="military-discount-banner">
-                    <span class="military-icon">🇺🇸</span>
-                    <span class="military-text">Proud to serve those who served! <strong>Special discounts for Military & Veterans</strong></span>
-                </div>
-
                 <!-- Contact Info in Hero -->
                 <div class="hero-contact">
                     <p class="contact-text">Questions or inquiries?</p>
@@ -50,6 +44,16 @@
                             ✉️ rentalspcola@gmail.com
                         </a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Military Discount Banner Section -->
+        <section class="military-banner-section">
+            <div class="container">
+                <div class="military-discount-banner">
+                    <span class="military-icon">🇺🇸</span>
+                    <span class="military-text">Proud to serve those who served! <strong>Special discounts for Military & Veterans</strong></span>
                 </div>
             </div>
         </section>

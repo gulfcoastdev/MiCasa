@@ -394,21 +394,22 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Military Discount Banner */
-.military-discount-banner {
-    margin-top: 30px;
+/* Military Discount Banner Section */
+.military-banner-section {
+    padding: 30px 0;
+    background: #f7f9fc;
     text-align: center;
-    position: relative;
-    z-index: 25;
-    background: linear-gradient(135deg, rgba(220, 53, 69, 0.95) 0%, rgba(176, 42, 55, 0.95) 100%);
-    padding: 15px 30px;
-    border-radius: 50px;
+}
+
+.military-discount-banner {
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    background: linear-gradient(135deg, #dc3545 0%, #b92b37 100%);
+    padding: 15px 30px;
+    border-radius: 50px;
     box-shadow: 0 6px 25px rgba(220, 53, 69, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
+    border: 2px solid rgba(220, 53, 69, 0.8);
     animation: pulse-glow 3s ease-in-out infinite;
 }
 
@@ -1719,7 +1720,33 @@ footer p {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
+
+    .military-banner-section {
+        padding: 20px 0;
+    }
+
+    .military-discount-banner {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0 10px;
+    }
+
+    .military-icon {
+        font-size: 1.3rem;
+    }
+
+    .military-text {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .military-text strong {
+        font-size: 1rem;
+        display: block;
+        margin-top: 4px;
+    }
+
     .slider-arrow {
         display: none;
     }
