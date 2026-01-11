@@ -22,22 +22,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll for navigation links
+    // Smooth scroll for navigation links (only on same page)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const href = this.getAttribute('href');
 
-            if (targetSection) {
-                const headerHeight = document.querySelector('.site-header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
+            // Check if link is a hash link on current page (not index.php#hero format)
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                if (targetSection) {
+                    const headerHeight = document.querySelector('.site-header').offsetHeight;
+                    const targetPosition = targetSection.offsetTop - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // Otherwise, allow normal navigation to different pages
         });
     });
 
