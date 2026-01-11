@@ -563,40 +563,8 @@ function getPropertyBySlug(slug) {
     return propertyData.properties.find(p => p.slug === slug || p.id === slug);
 }
 
-// Video Tour Modal Functions
-function openVideoTour(videoUrl, propertyName) {
-    const modal = document.getElementById('video-tour-modal');
-    const iframe = document.getElementById('video-modal-iframe');
-    const title = document.getElementById('video-modal-title');
-
-    if (modal && iframe && title) {
-        title.textContent = `${propertyName} - Virtual Tour`;
-        iframe.src = videoUrl;
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    }
-}
-
-function closeVideoTour() {
-    const modal = document.getElementById('video-tour-modal');
-    const iframe = document.getElementById('video-modal-iframe');
-
-    if (modal && iframe) {
-        modal.style.display = 'none';
-        iframe.src = ''; // Stop video playback
-        document.body.style.overflow = ''; // Restore scrolling
-    }
-}
-
-// Close modal on Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeVideoTour();
-    }
-});
+// Video Tour Modal Functions are now in video-modal.js (shared across pages)
 
 // Make property data globally accessible
 window.propertyData = propertyData;
 window.getPropertyBySlug = getPropertyBySlug;
-window.openVideoTour = openVideoTour;
-window.closeVideoTour = closeVideoTour;
