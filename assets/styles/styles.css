@@ -105,18 +105,23 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 0;
+    padding: 0 !important;
+    margin: 0;
     color: #1a5490;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
     transition: color 0.3s ease;
-    background: none;
-    border: none;
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .header-contact-link:hover {
     color: #3498db;
+    background: none !important;
+    background-color: transparent !important;
 }
 
 .header-contact-link .contact-icon {
