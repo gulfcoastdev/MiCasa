@@ -164,17 +164,99 @@ function renderPropertyOverview(property) {
 }
 
 function renderUnitsSection(property) {
-    const unitsHTML = property.units.map((unit, index) => renderUnitCard(unit, index, property)).join('');
+    const gridUnitsHTML = property.units.map((unit, index) => renderUnitCard(unit, index, property)).join('');
+    const flowUnitsHTML = property.units.map((unit, index) => renderUnitFlow(unit, index, property)).join('');
 
     return `
         <section id="units-section" class="units-section">
             <div class="container">
-                <h2>Choose Your Unit</h2>
-                <div class="units-grid">
-                    ${unitsHTML}
+                <div class="units-header">
+                    <h2>Choose Your Unit</h2>
+                    <div class="layout-toggle">
+                        <button class="layout-btn active" data-layout="grid" onclick="switchLayout('grid')">
+                            <span class="layout-icon">⊞</span> Grid
+                        </button>
+                        <button class="layout-btn" data-layout="flow" onclick="switchLayout('flow')">
+                            <span class="layout-icon">☰</span> Flow
+                        </button>
+                    </div>
+                </div>
+
+                <div id="units-grid-view" class="units-grid">
+                    ${gridUnitsHTML}
+                </div>
+
+                <div id="units-flow-view" class="units-flow" style="display: none;">
+                    ${flowUnitsHTML}
                 </div>
             </div>
         </section>
+    `;
+}
+
+function renderUnitFlow(unit, index, property) {
+    const images = unit.images || [property.image];
+
+    const imageGridHTML = images.slice(0, 6).map((img, i) => `
+        <div class="flow-image-item">
+            <img src="${img}" alt="${unit.name} - Photo ${i + 1}" loading="lazy">
+        </div>
+    `).join('');
+
+    const hasVideo = unit.videoTour;
+
+    return `
+        <div class="unit-flow-item">
+            <div class="flow-content">
+                <div class="flow-header">
+                    <h3 class="flow-unit-name">${unit.name}</h3>
+                    <div class="flow-unit-meta">
+                        <span class="meta-item"><strong>${unit.bedrooms}</strong> bed</span>
+                        <span class="meta-separator">•</span>
+                        <span class="meta-item"><strong>${unit.bathrooms}</strong> bath</span>
+                        ${unit.sleeps ? `<span class="meta-separator">•</span><span class="meta-item">Sleeps <strong>${unit.sleeps}</strong></span>` : ''}
+                        <span class="meta-separator">•</span>
+                        <span class="meta-price">${formatCurrency(unit.rent)}/month</span>
+                    </div>
+                </div>
+
+                ${hasVideo ? `
+                    <div class="flow-video-section">
+                        <h4>Video Tour</h4>
+                        <div class="flow-video-wrapper">
+                            <iframe
+                                src="${unit.videoTour}"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy"
+                            ></iframe>
+                        </div>
+                    </div>
+                ` : ''}
+
+                <div class="flow-images-section">
+                    <h4>Photos</h4>
+                    <div class="flow-images-grid">
+                        ${imageGridHTML}
+                    </div>
+                </div>
+
+                <div class="flow-description">
+                    <p>Fully furnished ${unit.bedrooms}-bedroom, ${unit.bathrooms}-bathroom unit. Includes all furniture, kitchenware, linens, and utilities options. Perfect for ${unit.sleeps ? `up to ${unit.sleeps} guests` : 'comfortable living'}.</p>
+                </div>
+
+                <div class="flow-actions">
+                    <a href="${unit.bookingUrl || property.bookingUrl}" target="_blank" class="btn btn-primary btn-flow-book">
+                        Book This Unit
+                    </a>
+                    <div class="flow-availability">
+                        <span class="availability-label">Available:</span>
+                        <span class="availability-date">${formatAvailabilityDate(unit.availableDate)}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     `;
 }
 
@@ -344,8 +426,28 @@ function showError(message) {
     `;
 }
 
+function switchLayout(layout) {
+    const gridView = document.getElementById('units-grid-view');
+    const flowView = document.getElementById('units-flow-view');
+    const gridBtn = document.querySelector('.layout-btn[data-layout="grid"]');
+    const flowBtn = document.querySelector('.layout-btn[data-layout="flow"]');
+
+    if (layout === 'grid') {
+        gridView.style.display = 'grid';
+        flowView.style.display = 'none';
+        gridBtn.classList.add('active');
+        flowBtn.classList.remove('active');
+    } else {
+        gridView.style.display = 'none';
+        flowView.style.display = 'block';
+        gridBtn.classList.remove('active');
+        flowBtn.classList.add('active');
+    }
+}
+
 // Make functions globally accessible
 window.toggleUnitVideo = toggleUnitVideo;
 window.navigateHeroSlider = navigateHeroSlider;
 window.navigateUnitSlider = navigateUnitSlider;
 window.goToUnitSlide = goToUnitSlide;
+window.switchLayout = switchLayout;

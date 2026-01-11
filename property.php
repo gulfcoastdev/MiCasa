@@ -21,6 +21,9 @@
                 <p>Loading property details...</p>
             </div>
         </div>
+
+        <!-- Marketing Component -->
+        <?php include 'components/marketing.php'; ?>
     </main>
 
     <?php include 'components/footer.php'; ?>
@@ -29,5 +32,6 @@
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/property-data.js"></script>
     <script src="assets/scripts/property-detail.js"></script>
+    <script src="assets/scripts/contact-form.js"></script>
 </body>
 </html>
