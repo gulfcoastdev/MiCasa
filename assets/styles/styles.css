@@ -104,11 +104,11 @@ body {
 .header-contact-link {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
+    gap: 5px;
+    padding: 4px 8px;
     color: #1a5490;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.3s ease;
 }
@@ -118,7 +118,7 @@ body {
 }
 
 .header-contact-link .contact-icon {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .header-contact-link .contact-info {
