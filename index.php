@@ -1,3 +1,4 @@
+<?php require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,6 +123,6 @@
     <script src="assets/scripts/data/property-data.js"></script>
     <script src="assets/scripts/utils/formatters.js"></script>
     <script src="assets/scripts/pages/main-page.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5zmwFcxCvFrMChrVpA3AcoBRXDgEb8b8&loading=async&libraries=marker&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_MAPS_API_KEY; ?>&loading=async&libraries=marker&callback=initMap"></script>
 </body>
 </html>
