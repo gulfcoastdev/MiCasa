@@ -414,7 +414,7 @@ body {
     gap: 15px;
     background: linear-gradient(135deg, #dc3545 0%, #b92b37 100%);
     padding: 40px 20px;
-    border-radius: 0;
+    border-radius: 16px;
     box-shadow: 0 4px 20px rgba(220, 53, 69, 0.3);
     animation: pulse-glow 3s ease-in-out infinite;
 }
