@@ -6,7 +6,8 @@ function openVideoTour(videoUrl, title) {
     const modalTitle = document.getElementById('video-modal-title');
 
     modalTitle.textContent = title;
-    iframe.src = videoUrl;
+    // Convert any YouTube URL format to embed format
+    iframe.src = getYouTubeEmbedUrl(videoUrl);
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }

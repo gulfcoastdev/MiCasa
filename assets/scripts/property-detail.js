@@ -231,7 +231,7 @@ function renderUnitFlow(unit, index, property) {
                         <h4>Video Tour</h4>
                         <div class="flow-video-wrapper">
                             <iframe
-                                src="${unit.videoTour}"
+                                src="${getYouTubeEmbedUrl(unit.videoTour)}"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen

@@ -26,7 +26,38 @@ function getAmenityIcon(amenity) {
     return '🏡';
 }
 
+// Convert any YouTube URL format to embed format
+function getYouTubeEmbedUrl(url) {
+    if (!url) return null;
+
+    // Already an embed URL
+    if (url.includes('youtube.com/embed/')) {
+        return url;
+    }
+
+    let videoId = null;
+
+    // Extract video ID from various YouTube URL formats
+    // Format: https://youtu.be/VIDEO_ID
+    if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1].split('?')[0];
+    }
+    // Format: https://www.youtube.com/watch?v=VIDEO_ID
+    else if (url.includes('youtube.com/watch')) {
+        const urlParams = new URLSearchParams(url.split('?')[1]);
+        videoId = urlParams.get('v');
+    }
+    // Format: https://www.youtube.com/v/VIDEO_ID
+    else if (url.includes('youtube.com/v/')) {
+        videoId = url.split('youtube.com/v/')[1].split('?')[0];
+    }
+
+    // Return embed URL if we found a video ID
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : url;
+}
+
 // Make functions globally accessible
 window.formatCurrency = formatCurrency;
 window.formatAvailabilityDate = formatAvailabilityDate;
 window.getAmenityIcon = getAmenityIcon;
+window.getYouTubeEmbedUrl = getYouTubeEmbedUrl;
