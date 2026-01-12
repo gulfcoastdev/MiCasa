@@ -43,7 +43,7 @@
         <section class="military-banner-section">
             <div class="container">
                 <div class="military-discount-banner">
-                    <span class="military-text">🇺🇸 Proud to serve those who served! <strong>Special discounts for Military & Veterans</strong></span>
+                    <span class="military-text">🇺🇸 Proud to serve those who served! 🇺🇸 <strong>Special discounts for Military & Veterans</strong></span>
                 </div>
             </div>
         </section>
@@ -122,7 +122,6 @@
     <script src="assets/scripts/data/property-data.js"></script>
     <script src="assets/scripts/utils/formatters.js"></script>
     <script src="assets/scripts/pages/main-page.js"></script>
-    <script src="assets/scripts/contact-form.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5zmwFcxCvFrMChrVpA3AcoBRXDgEb8b8&loading=async&libraries=marker&callback=initMap"></script>
 </body>
 </html>

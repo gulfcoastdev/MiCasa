@@ -118,32 +118,5 @@
         <div class="contact-cta">
             <p>Questions about availability, pricing, or booking? Don't hesitate to reach out!</p>
         </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form-container">
-            <h3>Send Us a Message</h3>
-            <form id="contact-form" class="contact-form" action="contact-handler.php" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone (Optional)</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-                <div id="form-message" class="form-message"></div>
-            </form>
-        </div>
     </div>
 </section>

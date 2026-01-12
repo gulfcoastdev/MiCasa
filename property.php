@@ -35,6 +35,5 @@
     <script src="assets/scripts/data/property-data.js"></script>
     <script src="assets/scripts/utils/formatters.js"></script>
     <script src="assets/scripts/property-detail.js"></script>
-    <script src="assets/scripts/contact-form.js"></script>
 </body>
 </html>
