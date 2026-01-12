@@ -411,7 +411,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
     background: linear-gradient(135deg, #dc3545 0%, #b92b37 100%);
     padding: 20px;
     border-radius: 16px;
@@ -428,30 +427,13 @@ body {
     }
 }
 
-.military-icon {
-    font-size: 2rem;
-    line-height: 1;
-    animation: wave 2s ease-in-out infinite;
-}
-
-@keyframes wave {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-10deg);
-    }
-    75% {
-        transform: rotate(10deg);
-    }
-}
-
 .military-text {
     color: white;
     font-size: 1rem;
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     line-height: 1.4;
+    text-align: center;
 }
 
 .military-text strong {
@@ -1910,12 +1892,6 @@ footer p {
 
     .military-discount-banner {
         padding: 15px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .military-icon {
-        font-size: 1.5rem;
     }
 
     .military-text {

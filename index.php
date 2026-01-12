@@ -43,8 +43,7 @@
         <section class="military-banner-section">
             <div class="container">
                 <div class="military-discount-banner">
-                    <span class="military-icon">🇺🇸</span>
-                    <span class="military-text">Proud to serve those who served! <strong>Special discounts for Military & Veterans</strong></span>
+                    <span class="military-text">🇺🇸 Proud to serve those who served! <strong>Special discounts for Military & Veterans</strong></span>
                 </div>
             </div>
         </section>
