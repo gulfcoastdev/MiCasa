@@ -209,7 +209,8 @@ function renderUnitFlow(unit, index, property) {
         </div>
     `).join('');
 
-    const hasVideo = unit.videoTour;
+    const videoUrl = unit.videoTour || property.propertyVideoTour;
+    const hasVideo = !!videoUrl;
 
     return `
         <div class="unit-flow-item">
@@ -231,7 +232,7 @@ function renderUnitFlow(unit, index, property) {
                         <h4>Video Tour</h4>
                         <div class="flow-video-wrapper">
                             <iframe
-                                src="${getYouTubeEmbedUrl(unit.videoTour)}"
+                                src="${getYouTubeEmbedUrl(videoUrl)}"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen
