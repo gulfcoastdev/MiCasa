@@ -67,7 +67,10 @@ function renderProperty(property) {
                 </table>
             </div>
             <div class="utility-bundle">
-                <strong>Utility Bundle Available:</strong> ${formatCurrency(property.utilityBundle.price)}/month (${property.utilityBundle.includes.join(', ')})
+                ${property.id === 'rebecca-street'
+                    ? `<strong>✨ All utilities included in rent!</strong> Includes: ${property.utilityBundle.includes.join(', ')} (${formatCurrency(property.utilityBundle.price)}/month value)`
+                    : `<strong>Utility Bundle Available:</strong> ${formatCurrency(property.utilityBundle.price)}/month (${property.utilityBundle.includes.join(', ')})`
+                }
             </div>
             <div class="property-amenities">
                 <h5>Property Features:</h5>
