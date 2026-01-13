@@ -329,13 +329,18 @@ function renderCTASection(property) {
     return `
         <section class="property-cta-section">
             <div class="container">
-                <h2>Ready to Book Your Stay?</h2>
-                <p>Contact us today to check availability and secure your rental</p>
-                ${property.bookingUrl ? `
-                    <a href="${property.bookingUrl}" target="_blank" class="btn btn-primary btn-large">
-                        Check Availability
+                <h2>Questions or Ready to Book?</h2>
+                <p>Contact us for details, questions, and availability</p>
+                <div class="cta-contact-info">
+                    <a href="tel:+1-850-912-9225" class="cta-contact-link">
+                        <span class="cta-icon">📞</span>
+                        <span>(850) 912-9225</span>
                     </a>
-                ` : ''}
+                    <a href="mailto:rentalspcola@gmail.com" class="cta-contact-link">
+                        <span class="cta-icon">✉️</span>
+                        <span>rentalspcola@gmail.com</span>
+                    </a>
+                </div>
             </div>
         </section>
     `;
