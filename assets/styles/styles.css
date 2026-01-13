@@ -1126,7 +1126,105 @@ body {
         width: 50px;
         height: 50px;
     }
-}\n\n/* Property Details & Availability Section */
+}\n\n/* Tenant Requirements Section */
+.requirements-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #fff8f0 100%);
+}
+
+.requirements-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a5490;
+}
+
+.requirements-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.requirements-content {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirements-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.05rem;
+    color: #333;
+    position: relative;
+    padding-left: 35px;
+}
+
+.requirements-list li:last-child {
+    border-bottom: none;
+}
+
+.requirements-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.requirements-note {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .requirements-section {
+        padding: 60px 0;
+    }
+
+    .requirements-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .requirements-intro {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .requirements-content {
+        padding: 25px 20px;
+    }
+
+    .requirements-list li {
+        font-size: 0.95rem;
+        padding: 12px 0 12px 30px;
+    }
+
+    .requirements-list li:before {
+        font-size: 1.1rem;
+    }
+}
+
+/* Property Details & Availability Section */
 .property-details-section {
     padding: 80px 0;
     background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);

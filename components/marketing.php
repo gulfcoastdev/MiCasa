@@ -92,6 +92,26 @@
     </div>
 </section>
 
+<!-- Tenant Requirements Section -->
+<section id="requirements" class="requirements-section">
+    <div class="container">
+        <h2>Tenant Requirements</h2>
+        <p class="requirements-intro">To maintain a safe and comfortable community for all residents, we have the following requirements:</p>
+        <div class="requirements-content">
+            <ul class="requirements-list">
+                <li>No evictions</li>
+                <li>No landlord or utility collections</li>
+                <li>No criminal record</li>
+                <li>Stable income required</li>
+                <li>Credit score of 640+ preferred, but decisions made on a case-by-case basis</li>
+                <li>No smoking on premises</li>
+                <li>Pets allowed upon approval</li>
+            </ul>
+        </div>
+        <p class="requirements-note">We evaluate each application individually. If you have questions about qualifications, please contact us.</p>
+    </div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="contact">
     <div class="container">
