@@ -78,6 +78,22 @@ function renderProperty(property) {
                     ${amenitiesHTML}
                 </ul>
             </div>
+            <div class="property-contact-footer">
+                <div class="footer-text">
+                    <h5>Questions or Ready to Book?</h5>
+                    <p>Contact us for details, questions, and availability</p>
+                </div>
+                <div class="footer-contact-links">
+                    <a href="tel:+1-850-912-9225" class="footer-contact-link">
+                        <span class="footer-icon">📞</span>
+                        <span>(850) 912-9225</span>
+                    </a>
+                    <a href="mailto:rentalspcola@gmail.com" class="footer-contact-link">
+                        <span class="footer-icon">✉️</span>
+                        <span>rentalspcola@gmail.com</span>
+                    </a>
+                </div>
+            </div>
         </div>
     `;
 }
