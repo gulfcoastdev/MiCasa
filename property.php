@@ -32,6 +32,7 @@
     <script src="assets/scripts/navigation.js"></script>
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/video-modal.js"></script>
+    <script src="assets/scripts/testimonials.js"></script>
     <script src="assets/scripts/data/property-data.js"></script>
     <script src="assets/scripts/utils/formatters.js"></script>
     <script src="assets/scripts/property-detail.js"></script>

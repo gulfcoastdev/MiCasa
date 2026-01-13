@@ -52,7 +52,7 @@
         <section class="description">
             <div class="container">
                 <h2>Premium Furnished Apartments in Pensacola</h2>
-                <p>Discover our collection of 12 beautifully furnished apartments in Pensacola, Florida, designed for comfort, convenience, and flexibility. Our move-in ready monthly rentals are ideal for military personnel, travel nurses, medical professionals, corporate housing, and extended stays. We proudly offer military discounts as a thank-you to those who serve.</p>
+                <p>Discover our collection of beautifully furnished apartments in Pensacola, Florida, designed for comfort, convenience, and flexibility. Our move-in ready monthly rentals are ideal for military personnel, travel nurses, medical professionals, corporate housing, and extended stays. We proudly offer military discounts as a thank-you to those who serve.</p>
             </div>
         </section>
 
@@ -119,6 +119,7 @@
     <script src="assets/scripts/clean-slider.js"></script>
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/video-modal.js"></script>
+    <script src="assets/scripts/testimonials.js"></script>
     <script src="assets/scripts/data/property-data.js"></script>
     <script src="assets/scripts/utils/formatters.js"></script>
     <script src="assets/scripts/pages/main-page.js"></script>

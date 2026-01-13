@@ -163,7 +163,7 @@
             </div>
 
             <!-- Testimonial 7 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"Awesome weeklong stay with plenty of supplies for accommodation excellent host!"</p>
                 <div class="testimonial-author">
@@ -173,7 +173,7 @@
             </div>
 
             <!-- Testimonial 8 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"This was the perfect place for our vacation. I can't wait to stay here again!"</p>
                 <div class="testimonial-author">
@@ -183,7 +183,7 @@
             </div>
 
             <!-- Testimonial 9 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"Wow, just wow! The Airbnb was the cleanest I've stayed in this far in all my travels! The neighborhood was quiet and right in the middle of gulf shores and Pensacola beach, making going to both easier! Janusz seriously goes above and beyond in making sure you have everything you need. She made sure our stay was perfect and she was great at communicating anytime we needed any help! We for sure will be back again one day!"</p>
                 <div class="testimonial-author">
@@ -194,7 +194,7 @@
             </div>
 
             <!-- Testimonial 10 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"This was just what we were looking for!"</p>
                 <div class="testimonial-author">
@@ -205,7 +205,7 @@
             </div>
 
             <!-- Testimonial 11 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"It was a pleasure staying at the house every thing was clean. The house had Beach chairs and umbrella and a nice bag with beach towels. We just use the chairs it was late to use the umbrella but great to know it's there to use. The Beach is really only 20 minutes away was not bad at all. Outside the house had a lot of activities to do with teenagers. Rhonda was always there to help and answer our text and phone calls. Great place to rent I definitely be back soon."</p>
                 <div class="testimonial-author">
@@ -216,7 +216,7 @@
             </div>
 
             <!-- Testimonial 12 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"Enjoyed our stay. Clean house. Comfortable bed. Good communication with host. Decent area, the neighbors reassured that nothing bad has ever happened and it's safe lol. Wouldn't mind booking again in the future. First time in Pensacola and wasn't disappointed."</p>
                 <div class="testimonial-author">
@@ -227,7 +227,7 @@
             </div>
 
             <!-- Testimonial 13 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★☆</div>
                 <p class="testimonial-text">"Great place to stay in just the right location!"</p>
                 <div class="testimonial-author">
@@ -237,7 +237,7 @@
             </div>
 
             <!-- Testimonial 14 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"We had a great stay! Would definitely book again!"</p>
                 <div class="testimonial-author">
@@ -247,7 +247,7 @@
             </div>
 
             <!-- Testimonial 15 -->
-            <div class="testimonial-card">
+            <div class="testimonial-card hidden-testimonial">
                 <div class="testimonial-rating">★★★★★</div>
                 <p class="testimonial-text">"Enjoyed our stay. This place is quiet, clean and nice."</p>
                 <div class="testimonial-author">
@@ -255,6 +255,10 @@
                     <span class="testimonial-date">July 2025</span>
                 </div>
             </div>
+        </div>
+
+        <div class="testimonials-toggle">
+            <button id="show-more-testimonials" class="btn-show-more">Show More Reviews</button>
         </div>
     </div>
 </section>
