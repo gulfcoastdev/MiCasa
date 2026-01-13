@@ -61,7 +61,7 @@ function renderHeroVideo(property) {
                     <h1 class="property-hero-title">${property.name}</h1>
                     <p class="property-hero-location">${property.location.city}, ${property.location.state}</p>
                     <div class="hero-cta-buttons">
-                        <a href="${property.bookingUrl}" target="_blank" class="btn btn-primary">Book Now</a>
+                        ${property.bookingUrl ? `<a href="${property.bookingUrl}" target="_blank" class="btn btn-primary">Book Now</a>` : ''}
                         <button class="btn btn-secondary" onclick="document.getElementById('units-section').scrollIntoView({behavior: 'smooth'})">View Units</button>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ function renderHeroSlider(property) {
                     <h1 class="property-hero-title">${property.name}</h1>
                     <p class="property-hero-location">${property.location.city}, ${property.location.state}</p>
                     <div class="hero-cta-buttons">
-                        <a href="${property.bookingUrl}" target="_blank" class="btn btn-primary">Book Now</a>
+                        ${property.bookingUrl ? `<a href="${property.bookingUrl}" target="_blank" class="btn btn-primary">Book Now</a>` : ''}
                         <button class="btn btn-secondary" onclick="document.getElementById('units-section').scrollIntoView({behavior: 'smooth'})">View Units</button>
                     </div>
                 </div>
@@ -254,9 +254,11 @@ function renderUnitFlow(unit, index, property) {
                 </div>
 
                 <div class="flow-actions">
-                    <a href="${unit.bookingUrl || property.bookingUrl}" target="_blank" class="btn btn-primary btn-flow-book">
-                        Book This Unit
-                    </a>
+                    ${unit.bookingUrl || property.bookingUrl ? `
+                        <a href="${unit.bookingUrl || property.bookingUrl}" target="_blank" class="btn btn-primary btn-flow-book">
+                            Book This Unit
+                        </a>
+                    ` : ''}
                     <div class="flow-availability">
                         <span class="availability-label">Available:</span>
                         <span class="availability-date">${formatAvailabilityDate(unit.availableDate)}</span>
@@ -313,9 +315,11 @@ function renderUnitCard(unit, index, property) {
                     </button>
                 ` : ''}
 
-                <a href="${unit.bookingUrl || property.bookingUrl}" target="_blank" class="btn btn-unit-book">
-                    Book This Unit
-                </a>
+                ${unit.bookingUrl || property.bookingUrl ? `
+                    <a href="${unit.bookingUrl || property.bookingUrl}" target="_blank" class="btn btn-unit-book">
+                        Book This Unit
+                    </a>
+                ` : ''}
             </div>
         </div>
     `;
@@ -327,9 +331,11 @@ function renderCTASection(property) {
             <div class="container">
                 <h2>Ready to Book Your Stay?</h2>
                 <p>Contact us today to check availability and secure your rental</p>
-                <a href="${property.bookingUrl}" target="_blank" class="btn btn-primary btn-large">
-                    Check Availability
-                </a>
+                ${property.bookingUrl ? `
+                    <a href="${property.bookingUrl}" target="_blank" class="btn btn-primary btn-large">
+                        Check Availability
+                    </a>
+                ` : ''}
             </div>
         </section>
     `;
