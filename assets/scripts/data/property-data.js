@@ -14,12 +14,12 @@ const propertyData = {
             squareFootage: 550,
             image: "assets/slider/image1.jpeg",
             heroVideo: null,
-            propertyVideoTour: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Sample - replace with actual tour
-            listingUrl: "https://www.avail.co/l/61109049",
-            bookingUrl: "https://www.avail.co/l/61109049",
+            propertyVideoTour: "https://youtu.be/oVqamApe-j0",
+            listingUrl: "https://www.avail.co/l/61452985",
+            bookingUrl: "https://www.avail.co/l/61452985",
             coordinates: { lat: 30.530505377105996, lng: -87.2915285663669 },
             mapInfo: { title: "1625 Rebecca St", type: "apartments" },
-            petPolicy: "No pets",
+            petPolicy: "Pets approved case by case",
             parking: "Street parking",
             utilityBundle: { price: 280, includes: ["Power", "Water", "Trash", "Sanitation", "Internet", "Monthly Cleaning"] },
             amenities: ["Pergola", "Large peaceful yard", "Fully furnished", "All utilities included in rent"],
@@ -29,52 +29,52 @@ const propertyData = {
                     name: "Unit A",
                     bedrooms: 1,
                     bathrooms: 1,
-                    rent: 1650,
+                    rent: 1680,
                     sleeps: 2,
                     availableDate: "2026-09-01",
                     status: "available",
                     images: ["assets/slider/image1.jpeg", "assets/slider/image2.jpeg"],
-                    videoTour: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Example - replace with actual video
-                    bookingUrl: "https://www.avail.co/l/61109049"
+                    videoTour: "https://youtu.be/8x_hrrqkpfs", // Example - replace with actual video
+                    bookingUrl: "https://www.avail.co/l/61452985"
                 },
                 {
                     id: "rebecca-unit-b",
                     name: "Unit B",
                     bedrooms: 1,
                     bathrooms: 1,
-                    rent: 1650,
+                    rent: 1680,
                     sleeps: 2,
                     availableDate: "2026-09-01",
                     status: "available",
-                    images: ["assets/slider/image1.jpeg"],
-                    videoTour: null,
-                    bookingUrl: "https://www.avail.co/l/61109049"
+                    images: ["assets/slider/image3.jpeg"],
+                    videoTour: "https://youtu.be/1Mcm02yAoEs",
+                    bookingUrl: "https://www.avail.co/l/61452985"
                 },
                 {
                     id: "rebecca-unit-c",
                     name: "Unit C",
                     bedrooms: 1,
                     bathrooms: 1,
-                    rent: 1650,
+                    rent: 1680,
                     sleeps: 2,
                     availableDate: "2026-03-30",
                     status: "available",
-                    images: ["assets/slider/image1.jpeg"],
-                    videoTour: null,
-                    bookingUrl: "https://www.avail.co/l/61109049"
+                    images: ["assets/slider/image15.jpeg"],
+                    videoTour: "https://youtu.be/Rd2HIVCPjTo",
+                    bookingUrl: "https://www.avail.co/l/61452985"
                 },
                 {
                     id: "rebecca-unit-d",
                     name: "Unit D",
                     bedrooms: 1,
                     bathrooms: 1,
-                    rent: 1650,
+                    rent: 1680,
                     sleeps: 2,
                     availableDate: "2026-03-01",
                     status: "available",
-                    images: ["assets/slider/image1.jpeg"],
-                    videoTour: null,
-                    bookingUrl: "https://www.avail.co/l/61109049"
+                    images: ["assets/slider/image16.jpeg"],
+                    videoTour: "https://youtu.be/r1nkbInTI8k",
+                    bookingUrl: "https://www.avail.co/l/61452985"
                 }
             ]
         },
@@ -85,13 +85,13 @@ const propertyData = {
             address: "1810 W Gadsden Community, Pensacola, FL 32501",
             location: { city: "Pensacola", state: "FL" },
             description: "Gated 4-Unit Complex",
-            fullDescription: "Exclusive gated community featuring four spacious 3-bedroom units with garage parking and beautiful outdoor amenities. Advertised price does not include utilities. Utility bundle available for $400/month (Power, Water, Trash, Sanitation, Internet).",
+            fullDescription: "Exclusive gated community featuring four spacious 3-bedroom units with garage parking (selected units) and beautiful outdoor amenities. Advertised price does not include utilities. Utility bundle available for $400/month (Power, Water, Trash, Sanitation, Internet).",
             squareFootage: 1600,
             image: "assets/slider/image6.jpeg",
             heroVideo: null,
-            propertyVideoTour: "https://www.youtube.com/embed/ScMzIvxBSi4", // Sample - replace with actual tour
-            listingUrl: "https://www.avail.co/l/60590948",
-            bookingUrl: "https://www.avail.co/l/60590948",
+            propertyVideoTour: "https://www.youtube.com/watch?v=CV8CIkuKBWA", // Sample - replace with actual tour
+            listingUrl: "https://www.zillow.com/homedetails/44723225_zpid/?view=public",
+            bookingUrl: "https://www.zillow.com/homedetails/44723225_zpid/?view=public",
             petPolicy: "Contact for details",
             parking: "Garage parking",
             coordinates: { lat: 30.419862779865245, lng: -87.23847799627355 },
@@ -99,10 +99,10 @@ const propertyData = {
             utilityBundle: { price: 400, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
             amenities: ["Garage parking (1810, 1816, 1818)", "Private parking for residents only", "Large backyard with Pergola Gazebo", "Firepit", "Grill", "Palm trees"],
             units: [
-                { id: "gadsden-1810", name: "1810 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-04-06", status: "available" },
-                { id: "gadsden-1812", name: "1812 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-04-22", status: "available" },
-                { id: "gadsden-1816", name: "1816 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-04-23", status: "available" },
-                { id: "gadsden-1818", name: "1818 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 2100, availableDate: "2026-03-22", status: "available" }
+                { id: "gadsden-1810", name: "1810 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 1950, availableDate: "2026-04-06", status: "available", bookingUrl: "https://www.zillow.com/homedetails/44723225_zpid/?view=public" },
+                { id: "gadsden-1812", name: "1812 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 1900, availableDate: "2026-04-22", status: "available", bookingUrl: "https://www.zillow.com/homedetails/44723225_zpid/?view=public" },
+                { id: "gadsden-1816", name: "1816 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 1950, availableDate: "2026-04-23", status: "available", bookingUrl: "https://www.zillow.com/homedetails/44723225_zpid/?view=public" },
+                { id: "gadsden-1818", name: "1818 W Gadsden", bedrooms: 3, bathrooms: 2, rent: 1950, availableDate: "2026-03-22", status: "available", bookingUrl: "https://www.zillow.com/homedetails/44723225_zpid/?view=public" }
             ]
         },
         {
@@ -112,7 +112,7 @@ const propertyData = {
             address: "1918 W Gadsden Duplex, Pensacola, FL 32501",
             location: { city: "Pensacola", state: "FL" },
             description: "2 Units",
-            fullDescription: "Spacious 3-bedroom duplex units with garage parking and private fenced backyard. Advertised price does not include utilities. Utility bundle available for $400/month (Power, Water, Trash, Sanitation, Internet).",
+            fullDescription: "Spacious 3-bedroom duplex units with garage parking and private fenced backyard for each unit. Advertised price does not include utilities. Utility bundle available for $400/month (Power, Water, Trash, Sanitation, Internet).",
             squareFootage: 1200,
             image: "assets/slider/image7.jpeg",
             heroVideo: null,
@@ -126,8 +126,8 @@ const propertyData = {
             utilityBundle: { price: 400, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
             amenities: ["Garage parking", "Fenced backyard"],
             units: [
-                { id: "gadsden-duplex-a", name: "Unit A", bedrooms: 3, bathrooms: 2, rent: 2250, availableDate: "2026-08-01", status: "available" },
-                { id: "gadsden-duplex-b", name: "Unit B", bedrooms: 3, bathrooms: 2, rent: 2250, availableDate: "2026-09-01", status: "available" }
+                { id: "gadsden-duplex-a", name: "Unit A", bedrooms: 3, bathrooms: 2, rent: 1950, availableDate: "2026-08-01", status: "available", bookingUrl: "https://www.avail.co/l/60493799" },
+                { id: "gadsden-duplex-b", name: "Unit B", bedrooms: 3, bathrooms: 2, rent: 1950, availableDate: "2026-09-01", status: "available", bookingUrl: "https://www.avail.co/l/60493799" }
             ]
         },
         {
@@ -141,7 +141,7 @@ const propertyData = {
             squareFootage: 850,
             image: "assets/slider/image5.jpeg",
             heroVideo: null,
-            propertyVideoTour: "https://www.youtube.com/embed/jNQXAC9IVRw", // Sample - replace with actual tour
+            propertyVideoTour: null, // Sample - replace with actual tour
             listingUrl: "https://www.avail.co/companies/micasa",
             bookingUrl: "https://www.avail.co/companies/micasa",
             petPolicy: "Contact for details",
@@ -151,8 +151,8 @@ const propertyData = {
             utilityBundle: { price: 250, includes: ["Power", "Water", "Trash", "Sanitation", "Internet"] },
             amenities: ["Large fenced backyard"],
             units: [
-                { id: "yacht-harbor-a", name: "Unit A", bedrooms: 2, bathrooms: 1, rent: 1750, availableDate: "2026-09-01", status: "available" },
-                { id: "yacht-harbor-b", name: "Unit B", bedrooms: 2, bathrooms: 1, rent: 1750, availableDate: "2026-05-01", status: "available" }
+                { id: "yacht-harbor-a", name: "Unit A", bedrooms: 2, bathrooms: 1, rent: 1700, availableDate: "2026-09-01", status: "available", bookingUrl: "https://www.avail.co/companies/micasa" },
+                { id: "yacht-harbor-b", name: "Unit B", bedrooms: 2, bathrooms: 1, rent: 1700, availableDate: "2026-05-01", status: "available", bookingUrl: "https://www.avail.co/companies/micasa" }
             ]
         }
     ],
