@@ -13,8 +13,8 @@ function renderProperty(property) {
             <td>${formatAvailabilityDate(unit.availableDate)}</td>
             ${hasVideoTour ? `
                 <td class="video-tour-cell">
-                    ${property.propertyVideoTour || unit.videoTour ? `
-                        <button class="video-tour-btn-table" onclick="openVideoTour('${property.propertyVideoTour || unit.videoTour}', '${property.name}')">
+                    ${unit.videoTour || property.propertyVideoTour ? `
+                        <button class="video-tour-btn-table" onclick="openVideoTour('${unit.videoTour || property.propertyVideoTour}', '${unit.videoTour ? unit.name + ' - ' + property.name : property.name}')">
                             <span class="video-icon">🎥</span>
                             Watch Video Tour
                         </button>
