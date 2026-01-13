@@ -1875,19 +1875,19 @@ body {
 /* Property CTA Section */
 .property-cta-section {
     padding: 80px 0;
-    background: #ffffff;
+    background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
     text-align: center;
 }
 
 .property-cta-section h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: white;
     margin-bottom: 15px;
 }
 
 .property-cta-section p {
     font-size: 1.1rem;
-    color: #555;
+    color: white;
     margin-bottom: 40px;
 }
 
@@ -1903,21 +1903,21 @@ body {
     align-items: center;
     gap: 12px;
     padding: 20px 35px;
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    background: white;
     border-radius: 12px;
     text-decoration: none;
-    color: white;
+    color: #1a5490;
     font-size: 1.1rem;
     font-weight: 600;
-    border: 2px solid #2980b9;
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .cta-contact-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(52, 152, 219, 0.4);
-    background: linear-gradient(135deg, #2980b9 0%, #1abc9c 100%);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    background: #f8f9fa;
     border-color: #1abc9c;
 }
 

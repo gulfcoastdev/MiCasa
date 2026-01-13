@@ -31,17 +31,17 @@ function renderPropertyDetail(property) {
     // Property Overview
     const overviewHTML = renderPropertyOverview(property);
 
-    // Units Section
-    const unitsHTML = renderUnitsSection(property);
-
     // CTA Section
     const ctaHTML = renderCTASection(property);
+
+    // Units Section
+    const unitsHTML = renderUnitsSection(property);
 
     container.innerHTML = `
         ${heroHTML}
         ${overviewHTML}
-        ${unitsHTML}
         ${ctaHTML}
+        ${unitsHTML}
     `;
 
     // Initialize interactive elements
