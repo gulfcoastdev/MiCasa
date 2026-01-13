@@ -56,20 +56,6 @@
             </div>
         </section>
 
-        <!-- Map Section -->
-        <section class="map-section">
-            <div class="container">
-                <h2>Property Locations</h2>
-            </div>
-            <div class="map-container">
-                <div id="map" class="google-map"></div>
-                <div id="map-fallback" class="map-placeholder" style="display: none;">
-                    <p>Interactive map showing our property locations in Pensacola, FL</p>
-                    <p><small>Please add your Google Maps API key to view the interactive map</small></p>
-                </div>
-            </div>
-        </section>
-
         <!-- Bedroom Filter Section -->
         <section id="filter" class="filter-section">
             <div class="container">
@@ -106,6 +92,20 @@
                     <!-- Universal amenities will be loaded here dynamically -->
                 </div>
 
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2>Property Locations</h2>
+            </div>
+            <div class="map-container">
+                <div id="map" class="google-map"></div>
+                <div id="map-fallback" class="map-placeholder" style="display: none;">
+                    <p>Interactive map showing our property locations in Pensacola, FL</p>
+                    <p><small>Please add your Google Maps API key to view the interactive map</small></p>
+                </div>
             </div>
         </section>
 
