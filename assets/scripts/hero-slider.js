@@ -18,14 +18,22 @@ async function initializeHeroSlider() {
 
     console.log(`✅ Found ${images.length} images for hero slider`);
 
-    // Create slides
+    // Create main slides
     const wrapper = document.getElementById('hero-swiper-wrapper');
     if (!wrapper) {
         console.error('Hero swiper wrapper not found');
         return;
     }
 
+    // Create thumbnail slides
+    const thumbsWrapper = document.getElementById('hero-thumbs-wrapper');
+    if (!thumbsWrapper) {
+        console.error('Hero thumbs wrapper not found');
+        return;
+    }
+
     images.forEach((imageName, index) => {
+        // Main slide
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
 
@@ -36,9 +44,30 @@ async function initializeHeroSlider() {
 
         slide.appendChild(img);
         wrapper.appendChild(slide);
+
+        // Thumbnail slide
+        const thumbSlide = document.createElement('div');
+        thumbSlide.className = 'swiper-slide';
+
+        const thumbImg = document.createElement('img');
+        thumbImg.src = `assets/slider/${imageName}`;
+        thumbImg.alt = `Thumbnail ${index + 1}`;
+        thumbImg.loading = 'lazy';
+
+        thumbSlide.appendChild(thumbImg);
+        thumbsWrapper.appendChild(thumbSlide);
     });
 
-    // Initialize Swiper
+    // Initialize thumbnail swiper first
+    const heroThumbsSwiper = new Swiper('.hero-thumbs-swiper', {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    // Initialize main swiper with thumbs
     heroSwiper = new Swiper('.hero-swiper', {
         loop: true,
         autoplay: {
@@ -46,17 +75,17 @@ async function initializeHeroSlider() {
             disableOnInteraction: false,
         },
         speed: 800,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+        thumbs: {
+            swiper: heroThumbsSwiper,
         },
     });
 
-    console.log('✅ Hero slider initialized');
+    console.log('✅ Hero slider with thumbnails initialized');
 }
 
 // Find image1.jpeg through image20.jpeg sequentially

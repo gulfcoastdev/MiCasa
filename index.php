@@ -22,7 +22,15 @@
                 <div class="swiper-wrapper" id="hero-swiper-wrapper">
                     <!-- Slides will be generated automatically by JavaScript -->
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- Thumbnail Slider -->
+            <div class="swiper hero-thumbs-swiper">
+                <div class="swiper-wrapper" id="hero-thumbs-wrapper">
+                    <!-- Thumbs will be generated automatically by JavaScript -->
+                </div>
             </div>
 
             <div class="container hero-content">
