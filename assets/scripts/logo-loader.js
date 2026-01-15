@@ -11,18 +11,18 @@ async function loadLogo() {
     
     // Possible logo filenames in order of priority
     const logoFiles = [
-        'logo.svg',
-        'logo.png', 
+        'logo.png',
         'logo.jpg',
         'logo.jpeg',
-        'mi-casa-logo.svg',
+        'logo.svg',
         'mi-casa-logo.png',
-        'micasa-logo.svg',
+        'mi-casa-logo.svg',
         'micasa-logo.png',
-        'brand-logo.svg',
+        'micasa-logo.svg',
         'brand-logo.png',
-        'company-logo.svg',
-        'company-logo.png'
+        'brand-logo.svg',
+        'company-logo.png',
+        'company-logo.svg'
     ];
     
     // Try to find and load logo

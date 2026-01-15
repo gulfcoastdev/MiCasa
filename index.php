@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furnished Rentals Pensacola FL | Mi Casa Rentals - Short & Long-Term</title>
     <meta name="description" content="Fully furnished apartments in Pensacola FL for short-term stays and long-term leases. Move-in ready corporate housing with WiFi. Book online or apply today!">
+    <link rel="canonical" href="https://www.micasa.rentals/">
     <link rel="stylesheet" href="assets/styles/styles.css">
 
     <?php include 'components/analytics.php'; ?>
@@ -120,7 +121,7 @@
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/video-modal.js"></script>
     <script src="assets/scripts/testimonials.js"></script>
-    <script src="assets/scripts/data/property-data.js"></script>
+    <script src="assets/scripts/data/property-data.php"></script>
     <script src="assets/scripts/utils/formatters.js"></script>
     <script src="assets/scripts/pages/main-page.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5zmwFcxCvFrMChrVpA3AcoBRXDgEb8b8&loading=async&libraries=marker&callback=initMap"></script>

@@ -1,0 +1,19 @@
+# robots.txt for MiCasa Rentals
+
+User-agent: *
+Allow: /
+
+# Disallow backend/admin files
+Disallow: /contact-handler.php
+
+# Disallow directories with no public content
+Disallow: /components/
+Disallow: /node_modules/
+Disallow: /playwright-report/
+Disallow: /.git/
+
+# Allow assets
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://www.micasa.rentals/sitemap.xml

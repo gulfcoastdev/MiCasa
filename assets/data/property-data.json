@@ -1,0 +1,180 @@
+{
+  "properties": [
+    {
+      "id": "rebecca-street",
+      "slug": "pensacola-rebecca-street-one-bedroom",
+      "seoTitle": "Furnished 1 Bedroom Rental in Pensacola Near UWF & NAS | MiCasa",
+      "seoDescription": "Quiet, fully furnished 1-bedroom rental in Pensacola near UWF, NAS, and Navy Federal. Move-in ready with utilities available. Ideal for travel nurses, military, and professionals.",
+      "name": "1625 Rebecca Street",
+      "address": "1625 Rebecca Street, Pensacola, FL 32534",
+      "location": { "city": "Pensacola", "state": "FL" },
+      "description": "Our One Bedroom Apartments",
+      "fullDescription": "This quiet, newly renovated 4-unit furnished apartment community in Pensacola is designed for comfortable, stress-free living. Located on a safe cul-de-sac and set on nearly half an acre, the property offers a peaceful residential feel while staying close to major employers, military bases, hospitals, beaches, and downtown. All units are fully furnished and move-in ready, making this property a great fit for travel nurses, military personnel, remote workers, and professionals seeking flexible monthly rentals. Residents enjoy a clean, quiet environment with shared amenities including a large tree-lined yard, fire pit, grill, gazebo, volleyball net, and on-site shared laundry. Conveniently located just minutes from Navy Federal, UWF, West Florida Hospital, NAS Pensacola, and about 25 minutes from Pensacola Beach, this small community offers an ideal balance of privacy and accessibility. Monthly rent includes all utilities and internet, providing a simple, all-inclusive living option in Pensacola.",
+      "squareFootage": 550,
+      "image": "assets/slider/image1.jpeg",
+      "heroVideo": null,
+      "propertyVideoTour": "https://youtu.be/oVqamApe-j0",
+      "listingUrl": null,
+      "bookingUrl": null,
+      "coordinates": { "lat": 30.530505377105996, "lng": -87.2915285663669 },
+      "mapInfo": { "title": "1625 Rebecca St", "type": "apartments" },
+      "petPolicy": "Pets approved case by case",
+      "parking": "Street parking",
+      "utilityBundle": { "price": 280, "includes": ["Power", "Water", "Trash", "Sanitation", "Internet", "Monthly Cleaning"] },
+      "amenities": ["Pergola", "Large peaceful yard", "Fully furnished", "All utilities included in rent"],
+      "units": [
+        {
+          "id": "rebecca-unit-a",
+          "name": "Unit A",
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "rent": 1680,
+          "sleeps": 4,
+          "availableDate": "2026-09-01",
+          "status": "available",
+          "images": ["assets/slider/image1.jpeg"],
+          "videoTour": "https://youtu.be/8x_hrrqkpfs",
+          "bookingUrl": "https://www.avail.co/l/61452985"
+        },
+        {
+          "id": "rebecca-unit-b",
+          "name": "Unit B",
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "rent": 1680,
+          "sleeps": 4,
+          "availableDate": "2026-09-01",
+          "status": "available",
+          "images": ["assets/slider/image3.jpeg"],
+          "videoTour": "https://youtu.be/1Mcm02yAoEs",
+          "bookingUrl": "https://www.avail.co/l/61452985"
+        },
+        {
+          "id": "rebecca-unit-c",
+          "name": "Unit C",
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "rent": 1680,
+          "sleeps": 4,
+          "availableDate": "2026-03-30",
+          "status": "available",
+          "images": ["assets/slider/image15.jpeg"],
+          "videoTour": "https://youtu.be/Rd2HIVCPjTo",
+          "bookingUrl": "https://www.avail.co/l/61452985"
+        },
+        {
+          "id": "rebecca-unit-d",
+          "name": "Unit D",
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "rent": 1680,
+          "sleeps": 4,
+          "availableDate": "2026-03-01",
+          "status": "available",
+          "images": ["assets/slider/image16.jpeg"],
+          "videoTour": "https://youtu.be/r1nkbInTI8k",
+          "bookingUrl": "https://www.avail.co/l/61452985"
+        }
+      ]
+    },
+    {
+      "id": "gadsden-community",
+      "slug": "pensacola-downtown-gated-three-bedroom",
+      "seoTitle": "Gated 3 Bedroom Apartments in Downtown Pensacola | MiCasa Rentals",
+      "seoDescription": "Modern gated 3-bedroom apartments in downtown Pensacola near Oar House Marina. Resort-style amenities, parking, and select garage access. Close to NAS and beaches.",
+      "name": "1810 W Gadsden Community",
+      "address": "1810 W Gadsden Community, Pensacola, FL 32501",
+      "location": { "city": "Pensacola", "state": "FL" },
+      "description": "Gated 4-Unit Complex",
+      "fullDescription": "This modern, exclusive gated 4-unit apartment community in downtown Pensacola was built in 2022–2023 and features four spacious 3-bedroom, 2-bath fully furnished units in a secure, resort-style setting. Conveniently located near downtown Pensacola, Oar House Marina, and top local restaurants, the property is less than 20 minutes from Pensacola Beach. Each unit offers high ceilings, abundant natural light, modern furnishings, smart TVs, a Keurig coffee maker, and a fully equipped kitchen with stainless steel appliances, making the community ideal for both short- and mid-term stays. Residents enjoy a fully fenced shared backyard with two grills, fire pit, pergola, gazebo, volleyball net, cornhole, and outdoor dining areas surrounded by mature palm trees, designed to comfortably accommodate multiple groups while maintaining privacy and a relaxed atmosphere. The community provides secure rear parking with up to three vehicles per unit, off-street parking, and garage parking access for select units. The location offers quick access to NAS Pensacola (under 20 minutes) and major employment centers, making it well suited for military personnel, travel nurses, remote workers, and professionals. Advertised rent does not include utilities; a utility bundle is available for $400 per month and includes power, water, trash, sanitation, and internet. This gated downtown Pensacola community combines space, comfort, and location in a setting designed to feel like home.",
+      "squareFootage": 1600,
+      "image": "assets/slider/image6.jpeg",
+      "heroVideo": null,
+      "propertyVideoTour": "https://www.youtube.com/watch?v=CV8CIkuKBWA",
+      "listingUrl": null,
+      "bookingUrl": null,
+      "petPolicy": "Contact for details",
+      "parking": "Garage parking",
+      "coordinates": { "lat": 30.419862779865245, "lng": -87.23847799627355 },
+      "mapInfo": { "title": "1810 W Gadsden Community", "type": "gated" },
+      "utilityBundle": { "price": 400, "includes": ["Power", "Water", "Trash", "Sanitation", "Internet"] },
+      "amenities": ["Garage parking (1810, 1816, 1818)", "Private parking for residents only", "Large backyard with Pergola Gazebo", "Firepit", "Grill", "Palm trees"],
+      "units": [
+        { "id": "gadsden-1810", "name": "1810 W Gadsden", "bedrooms": 3, "bathrooms": 2, "rent": 1950, "availableDate": "2026-04-06", "status": "available", "bookingUrl": "https://www.zillow.com/homedetails/1818-W-Gadsden-St-Pensacola-FL-32501/447132368_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare" },
+        { "id": "gadsden-1812", "name": "1812 W Gadsden", "bedrooms": 3, "bathrooms": 2, "rent": 1900, "availableDate": "2026-04-22", "status": "available", "bookingUrl": "https://www.zillow.com/homedetails/1812-W-Gadsden-St-Pensacola-FL-32501/2060531734_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare" },
+        { "id": "gadsden-1816", "name": "1816 W Gadsden", "bedrooms": 3, "bathrooms": 2, "rent": 1950, "availableDate": "2026-04-23", "status": "available", "bookingUrl": "https://www.zillow.com/homedetails/44723225_zpid/?view=public" },
+        { "id": "gadsden-1818", "name": "1818 W Gadsden", "bedrooms": 3, "bathrooms": 2, "rent": 1950, "availableDate": "2026-03-22", "status": "available", "bookingUrl": "https://www.zillow.com/homedetails/1818-W-Gadsden-St-Pensacola-FL-32501/447132368_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare" }
+      ]
+    },
+    {
+      "id": "gadsden-duplex",
+      "slug": "pensacola-downtown-three-bedroom",
+      "seoTitle": "3 Bedroom Duplex Rentals in Downtown Pensacola | MiCasa Rentals",
+      "seoDescription": "Spacious 3-bedroom duplex rentals in downtown Pensacola near NAS and Oar House Marina. Private yards, garage parking, and close to beaches.",
+      "name": "1918 W Gadsden Duplex",
+      "address": "1918 W Gadsden Duplex, Pensacola, FL 32501",
+      "location": { "city": "Pensacola", "state": "FL" },
+      "description": "2 Units",
+      "fullDescription": "Spacious 3-bedroom duplex units with garage parking and private fenced backyard for each unit. Advertised price does not include utilities. Utility bundle available for $400/month (Power, Water, Trash, Sanitation, Internet).",
+      "squareFootage": 1200,
+      "image": "assets/slider/image7.jpeg",
+      "heroVideo": null,
+      "propertyVideoTour": null,
+      "listingUrl": null,
+      "bookingUrl": null,
+      "petPolicy": "Contact for details",
+      "parking": "Garage parking",
+      "coordinates": { "lat": 30.420321286721673, "lng": -87.23991679528676 },
+      "mapInfo": { "title": "1918 W Gadsden Duplex", "type": "duplex" },
+      "utilityBundle": { "price": 400, "includes": ["Power", "Water", "Trash", "Sanitation", "Internet"] },
+      "amenities": ["Garage parking", "Fenced backyard"],
+      "units": [
+        { "id": "gadsden-duplex-a", "name": "Unit A", "bedrooms": 3, "bathrooms": 2, "rent": 1950, "availableDate": "2026-08-01", "status": "available", "bookingUrl": "https://www.avail.co/l/60493799" },
+        { "id": "gadsden-duplex-b", "name": "Unit B", "bedrooms": 3, "bathrooms": 2, "rent": 1950, "availableDate": "2026-09-01", "status": "available", "bookingUrl": "https://www.avail.co/l/60493799" }
+      ]
+    },
+    {
+      "id": "yacht-harbor",
+      "slug": "pensacola-west-florida-hospital-two-bedroom",
+      "seoTitle": "2 Bedroom Duplex Rental in Pensacola Near UWF & West Florida Hospital | MiCasa",
+      "seoDescription": "Comfortable 2-bedroom duplex rentals in Pensacola's Yacht Harbor area near UWF and West Florida Hospital. King beds, office space, yard, and easy beach access.",
+      "name": "4969 Yacht Harbor Drive",
+      "address": "4969 Yacht Harbor Drive, Pensacola, FL 32514",
+      "location": { "city": "Pensacola", "state": "FL" },
+      "description": "2 Units",
+      "fullDescription": "This quiet 2-unit duplex in Pensacola's Yacht Harbor area offers two comfortable 2-bedroom apartments in a convenient residential location near UWF, West Florida Hospital, Navy Federal, and local beaches. Ideal for travel nurses, professionals, remote workers, and extended stays, each single-story unit includes two king-size beds, a fully equipped kitchen, a 58\" smart TV, fast Wi-Fi, two dedicated work desks, a dining area, and an in-unit washer and dryer. Both units share access to a fully fenced backyard with shady trees, a small patio, and a grill—perfect for relaxing outdoors after a long day. Free parking is available for two or more vehicles per unit. Recent updates include granite countertops, refreshed cabinets, updated appliances, and fresh paint; while improved, this remains an older property and may have minor imperfections, reflected in its value-focused pricing. Drive times include Pensacola Beach (25 minutes), Perdido Key (33 minutes), Downtown Pensacola (16 minutes), Navy Federal (7 minutes), UWF (10 minutes), Pensacola Airport (10 minutes), West Florida Hospital (11 minutes), and NAS Pensacola (23 minutes). Advertised price does not include utilities. Utility bundle available for $250/month (Power, Water, Trash, Sanitation, Internet).",
+      "squareFootage": 850,
+      "image": "assets/slider/image5.jpeg",
+      "heroVideo": null,
+      "propertyVideoTour": null,
+      "listingUrl": "https://www.avail.co/companies/micasa",
+      "bookingUrl": "https://www.avail.co/companies/micasa",
+      "petPolicy": "Contact for details",
+      "parking": "Driveway parking",
+      "coordinates": { "lat": 30.514003753877137, "lng": -87.17162733479648 },
+      "mapInfo": { "title": "4969 Yacht Harbor Dr", "type": "single" },
+      "utilityBundle": { "price": 250, "includes": ["Power", "Water", "Trash", "Sanitation", "Internet"] },
+      "amenities": ["Large fenced backyard"],
+      "units": [
+        { "id": "yacht-harbor-a", "name": "Unit A", "bedrooms": 2, "bathrooms": 1, "rent": 1700, "availableDate": "2026-09-01", "status": "available", "bookingUrl": "https://www.avail.co/companies/micasa" },
+        { "id": "yacht-harbor-b", "name": "Unit B", "bedrooms": 2, "bathrooms": 1, "rent": 1700, "availableDate": "2026-05-01", "status": "available", "bookingUrl": "https://www.avail.co/companies/micasa" }
+      ]
+    }
+  ],
+  "universalAmenities": [
+    "High-Speed Internet Available (not included)",
+    "55+ Inch Smart TV",
+    "Landscaping",
+    "Pest Control"
+  ],
+  "contact": {
+    "phone": "(850) 912-9225",
+    "email": "rentalspcola@gmail.com",
+    "shortTermBookings": "https://micasa.directstays.com/",
+    "longTermRentals": "https://www.avail.co/companies/micasa",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/micasa.pcola",
+      "instagram": "https://www.instagram.com/micasa.rentals/"
+    }
+  }
+}

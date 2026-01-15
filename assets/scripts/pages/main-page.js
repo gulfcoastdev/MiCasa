@@ -38,7 +38,7 @@ function renderProperty(property) {
                     <div class="square-footage">${property.squareFootage} sq ft per unit</div>
                     <div class="property-links">
                         ${property.slug ? `
-                            <a href="property.php?slug=${property.slug}" class="listing-link view-details-link">
+                            <a href="listing.php?slug=${property.slug}" class="listing-link view-details-link">
                                 View Full Details →
                             </a>
                         ` : ''}
