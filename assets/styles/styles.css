@@ -442,8 +442,8 @@ body {
     font-size: 1.1rem;
 }
 
-/* Slider Styles */
-.slider {
+/* Swiper Hero Slider */
+.hero-swiper {
     position: absolute;
     top: 0;
     left: 0;
@@ -452,23 +452,16 @@ body {
     z-index: 1;
 }
 
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-swiper .swiper-slide {
+    position: relative;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
-.slide.active {
-    opacity: 1;
-}
-
-.slide-overlay {
+.hero-swiper .swiper-slide::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -477,65 +470,51 @@ body {
     background: linear-gradient(135deg, rgba(52, 152, 219, 0.25) 0%, rgba(26, 188, 156, 0.2) 50%, rgba(241, 196, 15, 0.15) 100%);
 }
 
-/* Slider Navigation */
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+/* Swiper Navigation Buttons */
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
     background: rgba(255, 255, 255, 0.25);
     border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    font-size: 2rem;
     width: 50px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
     border-radius: 50%;
-    z-index: 20;
-    transition: all 0.3s ease;
     backdrop-filter: blur(15px);
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+    transition: all 0.3s ease;
 }
 
-.slider-arrow:hover {
+.hero-swiper .swiper-button-prev:after,
+.hero-swiper .swiper-button-next:after {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.hero-swiper .swiper-button-prev:hover,
+.hero-swiper .swiper-button-next:hover {
     background: rgba(52, 152, 219, 0.8);
     border-color: rgba(255, 255, 255, 0.8);
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 
-.slider-arrow.prev {
-    left: 30px;
-}
-
-.slider-arrow.next {
-    right: 30px;
-}
-
-/* Slider Dots */
-.slider-dots {
-    position: absolute;
+/* Swiper Pagination */
+.hero-swiper .swiper-pagination {
     bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 15px;
-    z-index: 15;
 }
 
-.dot {
+.hero-swiper .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
-.dot.active,
-.dot:hover {
+.hero-swiper .swiper-pagination-bullet-active {
+    background: white;
+    transform: scale(1.2);
+}
+
+.hero-swiper .swiper-pagination-bullet:hover {
     background: white;
     transform: scale(1.2);
 }
@@ -2322,23 +2301,12 @@ footer p {
         margin-top: 5px;
     }
 
-    .slider-arrow {
+    .hero-swiper .swiper-button-prev,
+    .hero-swiper .swiper-button-next {
         display: none;
     }
-    
-    .slider-arrow.prev {
-        left: 15px;
-    }
-    
-    .slider-arrow.next {
-        right: 15px;
-    }
-    
-    .slider-dots {
-        display: none;
-    }
-    
-    .dot {
+
+    .hero-swiper .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
     }
@@ -2548,14 +2516,11 @@ footer p {
         text-overflow: ellipsis;
     }
     
-    .slider-arrow {
+    .hero-swiper .swiper-button-prev,
+    .hero-swiper .swiper-button-next {
         display: none;
     }
-    
-    .slider-dots {
-        display: none;
-    }
-    
+
     .description h2, .cta-section h2, .contact h2, .map-section h2, .pricing-section h2, .property-details-section h2, .benefits h2 {
         font-size: 1.4rem;
     }

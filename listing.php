@@ -29,6 +29,7 @@ if ($slug && $propertyData) {
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="<?php echo htmlspecialchars($pageDescription); ?>">
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="stylesheet" href="assets/styles/property-detail.css">
 
@@ -53,6 +54,7 @@ if ($slug && $propertyData) {
     <?php include 'components/video-modal.php'; ?>
     <?php include 'components/footer.php'; ?>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/scripts/navigation.js"></script>
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/video-modal.js"></script>

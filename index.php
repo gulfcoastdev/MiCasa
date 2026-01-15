@@ -6,6 +6,7 @@
     <title>Furnished Rentals Pensacola FL | Mi Casa Rentals - Short & Long-Term</title>
     <meta name="description" content="Fully furnished apartments in Pensacola FL for short-term stays and long-term leases. Move-in ready corporate housing with WiFi. Book online or apply today!">
     <link rel="canonical" href="https://www.micasa.rentals/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
 
     <?php include 'components/analytics.php'; ?>
@@ -16,9 +17,14 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
-            <!-- Image Slider - Content loaded dynamically by JavaScript -->
-            <div class="slider">
-                <!-- Slides, navigation arrows, and dots will be generated automatically -->
+            <!-- Image Slider - Swiper -->
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper" id="hero-swiper-wrapper">
+                    <!-- Slides will be generated automatically by JavaScript -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
 
             <div class="container hero-content">
@@ -116,8 +122,9 @@
     <?php include 'components/video-modal.php'; ?>
     <?php include 'components/footer.php'; ?>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/scripts/navigation.js"></script>
-    <script src="assets/scripts/clean-slider.js"></script>
+    <script src="assets/scripts/hero-slider.js"></script>
     <script src="assets/scripts/logo-loader.js"></script>
     <script src="assets/scripts/video-modal.js"></script>
     <script src="assets/scripts/testimonials.js"></script>

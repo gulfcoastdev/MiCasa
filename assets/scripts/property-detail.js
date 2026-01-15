@@ -74,18 +74,21 @@ function renderHeroSlider(property) {
     const allImages = [property.image, ...property.units.flatMap(u => u.images || [])].filter((v, i, a) => a.indexOf(v) === i);
 
     const slidesHTML = allImages.map((img, index) => `
-        <div class="hero-slide ${index === 0 ? 'active' : ''}">
+        <div class="swiper-slide">
             <img src="${img}" alt="${property.name}" loading="${index === 0 ? 'eager' : 'lazy'}">
         </div>
     `).join('');
 
     return `
         <section class="property-hero hero-slider">
-            <div class="hero-slider-container">
-                ${slidesHTML}
+            <div class="swiper property-hero-swiper">
+                <div class="swiper-wrapper">
+                    ${slidesHTML}
+                </div>
                 ${allImages.length > 1 ? `
-                    <button class="slider-nav prev" onclick="navigateHeroSlider(-1)">‹</button>
-                    <button class="slider-nav next" onclick="navigateHeroSlider(1)">›</button>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
                 ` : ''}
             </div>
             <div class="hero-overlay">
@@ -274,17 +277,17 @@ function renderUnitCard(unit, index, property) {
     const hasMultipleImages = images.length > 1;
 
     const imagesHTML = hasMultipleImages ? `
-        <div class="unit-slider" data-unit="${unit.id}">
-            ${images.map((img, i) => `
-                <div class="unit-slide ${i === 0 ? 'active' : ''}">
-                    <img src="${img}" alt="${unit.name}" loading="lazy">
-                </div>
-            `).join('')}
-            <button class="unit-slider-nav prev" onclick="navigateUnitSlider('${unit.id}', -1)">‹</button>
-            <button class="unit-slider-nav next" onclick="navigateUnitSlider('${unit.id}', 1)">›</button>
-            <div class="unit-slider-dots">
-                ${images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" onclick="goToUnitSlide('${unit.id}', ${i})"></span>`).join('')}
+        <div class="swiper unit-swiper" data-unit="${unit.id}">
+            <div class="swiper-wrapper">
+                ${images.map((img, i) => `
+                    <div class="swiper-slide">
+                        <img src="${img}" alt="${unit.name}" loading="lazy">
+                    </div>
+                `).join('')}
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
     ` : `
         <div class="unit-image">
@@ -354,56 +357,43 @@ function initializeVideoToggles() {
 }
 
 function initializeUnitSliders() {
-    // Sliders are initialized and controlled by navigation functions
-}
+    // Initialize property hero swiper
+    const propertyHeroSwiper = document.querySelector('.property-hero-swiper');
+    if (propertyHeroSwiper) {
+        new Swiper('.property-hero-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+            pagination: {
+                el: '.property-hero-swiper .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.property-hero-swiper .swiper-button-next',
+                prevEl: '.property-hero-swiper .swiper-button-prev',
+            },
+        });
+    }
 
-let currentHeroSlide = 0;
-
-function navigateHeroSlider(direction) {
-    const slides = document.querySelectorAll('.property-hero .hero-slide');
-    if (slides.length === 0) return;
-
-    slides[currentHeroSlide].classList.remove('active');
-    currentHeroSlide = (currentHeroSlide + direction + slides.length) % slides.length;
-    slides[currentHeroSlide].classList.add('active');
-}
-
-const unitSlideIndexes = {};
-
-function navigateUnitSlider(unitId, direction) {
-    const slider = document.querySelector(`.unit-slider[data-unit="${unitId}"]`);
-    if (!slider) return;
-
-    const slides = slider.querySelectorAll('.unit-slide');
-    const dots = slider.querySelectorAll('.dot');
-
-    if (!unitSlideIndexes[unitId]) unitSlideIndexes[unitId] = 0;
-
-    slides[unitSlideIndexes[unitId]].classList.remove('active');
-    dots[unitSlideIndexes[unitId]].classList.remove('active');
-
-    unitSlideIndexes[unitId] = (unitSlideIndexes[unitId] + direction + slides.length) % slides.length;
-
-    slides[unitSlideIndexes[unitId]].classList.add('active');
-    dots[unitSlideIndexes[unitId]].classList.add('active');
-}
-
-function goToUnitSlide(unitId, index) {
-    const slider = document.querySelector(`.unit-slider[data-unit="${unitId}"]`);
-    if (!slider) return;
-
-    const slides = slider.querySelectorAll('.unit-slide');
-    const dots = slider.querySelectorAll('.dot');
-
-    if (!unitSlideIndexes[unitId]) unitSlideIndexes[unitId] = 0;
-
-    slides[unitSlideIndexes[unitId]].classList.remove('active');
-    dots[unitSlideIndexes[unitId]].classList.remove('active');
-
-    unitSlideIndexes[unitId] = index;
-
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
+    // Initialize unit swipers
+    const unitSwipers = document.querySelectorAll('.unit-swiper');
+    unitSwipers.forEach(swiperEl => {
+        new Swiper(swiperEl, {
+            loop: true,
+            speed: 600,
+            pagination: {
+                el: swiperEl.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: swiperEl.querySelector('.swiper-button-next'),
+                prevEl: swiperEl.querySelector('.swiper-button-prev'),
+            },
+        });
+    });
 }
 
 function showError(message) {
