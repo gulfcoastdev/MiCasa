@@ -25,12 +25,16 @@ async function initializeHeroSlider() {
         return;
     }
 
-    images.forEach(imageName => {
+    images.forEach((imageName, index) => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
-        slide.style.backgroundImage = `url('assets/slider/${imageName}')`;
-        slide.style.backgroundSize = 'cover';
-        slide.style.backgroundPosition = 'center';
+
+        const img = document.createElement('img');
+        img.src = `assets/slider/${imageName}`;
+        img.alt = `Hero slide ${index + 1}`;
+        img.loading = index === 0 ? 'eager' : 'lazy';
+
+        slide.appendChild(img);
         wrapper.appendChild(slide);
     });
 
