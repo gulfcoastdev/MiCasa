@@ -430,7 +430,4 @@ function switchLayout(layout) {
 
 // Make functions globally accessible
 // Note: openVideoTour and closeVideoTour are in video-modal.js
-window.navigateHeroSlider = navigateHeroSlider;
-window.navigateUnitSlider = navigateUnitSlider;
-window.goToUnitSlide = goToUnitSlide;
 window.switchLayout = switchLayout;
