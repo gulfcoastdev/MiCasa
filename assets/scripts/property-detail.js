@@ -86,8 +86,6 @@ function renderHeroSlider(property) {
                     ${slidesHTML}
                 </div>
                 ${allImages.length > 1 ? `
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                     <div class="swiper-pagination"></div>
                 ` : ''}
             </div>
@@ -285,8 +283,6 @@ function renderUnitCard(unit, index, property) {
                     </div>
                 `).join('')}
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
             <div class="swiper-pagination"></div>
         </div>
     ` : `
@@ -371,10 +367,6 @@ function initializeUnitSliders() {
                 el: '.property-hero-swiper .swiper-pagination',
                 clickable: true,
             },
-            navigation: {
-                nextEl: '.property-hero-swiper .swiper-button-next',
-                prevEl: '.property-hero-swiper .swiper-button-prev',
-            },
         });
     }
 
@@ -387,10 +379,6 @@ function initializeUnitSliders() {
             pagination: {
                 el: swiperEl.querySelector('.swiper-pagination'),
                 clickable: true,
-            },
-            navigation: {
-                nextEl: swiperEl.querySelector('.swiper-button-next'),
-                prevEl: swiperEl.querySelector('.swiper-button-prev'),
             },
         });
     });
