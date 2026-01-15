@@ -485,6 +485,7 @@ body {
     border-radius: 50%;
     backdrop-filter: blur(15px);
     transition: all 0.3s ease;
+    z-index: 20;
 }
 
 .hero-swiper .swiper-button-prev:after,
@@ -504,6 +505,7 @@ body {
 /* Swiper Pagination */
 .hero-swiper .swiper-pagination {
     bottom: 30px;
+    z-index: 20;
 }
 
 .hero-swiper .swiper-pagination-bullet {
