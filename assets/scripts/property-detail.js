@@ -79,16 +79,28 @@ function renderHeroSlider(property) {
         </div>
     `).join('');
 
+    const thumbsHTML = allImages.map((img, index) => `
+        <div class="swiper-slide">
+            <img src="${img}" alt="${property.name} thumbnail ${index + 1}" loading="lazy">
+        </div>
+    `).join('');
+
     return `
         <section class="property-hero hero-slider">
             <div class="swiper property-hero-swiper">
                 <div class="swiper-wrapper">
                     ${slidesHTML}
                 </div>
-                ${allImages.length > 1 ? `
-                    <div class="swiper-pagination"></div>
-                ` : ''}
             </div>
+
+            ${allImages.length > 1 ? `
+                <div class="swiper property-hero-thumbs-swiper">
+                    <div class="swiper-wrapper">
+                        ${thumbsHTML}
+                    </div>
+                </div>
+            ` : ''}
+
             <div class="hero-overlay">
                 <div class="container hero-content">
                     <h1 class="property-hero-title">${property.name}</h1>
@@ -353,21 +365,51 @@ function initializeVideoToggles() {
 }
 
 function initializeUnitSliders() {
-    // Initialize property hero swiper
+    // Initialize property hero swiper with thumbnails
     const propertyHeroSwiper = document.querySelector('.property-hero-swiper');
+    const propertyHeroThumbsSwiper = document.querySelector('.property-hero-thumbs-swiper');
+
     if (propertyHeroSwiper) {
-        new Swiper('.property-hero-swiper', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            speed: 800,
-            pagination: {
-                el: '.property-hero-swiper .swiper-pagination',
-                clickable: true,
-            },
-        });
+        let heroSwiperInstance;
+
+        // Initialize thumbnail swiper first if it exists
+        if (propertyHeroThumbsSwiper) {
+            const thumbsSwiper = new Swiper('.property-hero-thumbs-swiper', {
+                loop: true,
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+
+            // Initialize main swiper with thumbnails
+            heroSwiperInstance = new Swiper('.property-hero-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                speed: 800,
+                spaceBetween: 10,
+                thumbs: {
+                    swiper: thumbsSwiper,
+                },
+            });
+        } else {
+            // Initialize without thumbnails (fallback)
+            heroSwiperInstance = new Swiper('.property-hero-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                speed: 800,
+                pagination: {
+                    el: '.property-hero-swiper .swiper-pagination',
+                    clickable: true,
+                },
+            });
+        }
     }
 
     // Initialize unit swipers

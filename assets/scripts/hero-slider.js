@@ -76,10 +76,6 @@ async function initializeHeroSlider() {
         },
         speed: 800,
         spaceBetween: 10,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
         thumbs: {
             swiper: heroThumbsSwiper,
         },

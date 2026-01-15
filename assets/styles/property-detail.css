@@ -79,6 +79,44 @@
     background: white;
 }
 
+/* Property Hero Thumbnail Swiper */
+.property-hero-thumbs-swiper {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    height: 80px;
+    z-index: 20;
+}
+
+.property-hero-thumbs-swiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.property-hero-thumbs-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+    border-color: white;
+}
+
+.property-hero-thumbs-swiper .swiper-slide:hover {
+    opacity: 0.8;
+}
+
+.property-hero-thumbs-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .hero-overlay {
     position: relative;
     z-index: 10;
@@ -729,6 +767,12 @@
         height: 60vh;
         min-height: 400px;
         margin-top: 70px;
+    }
+
+    .property-hero-thumbs-swiper {
+        width: 90%;
+        height: 60px;
+        bottom: 10px;
     }
 
     .property-hero-title {
