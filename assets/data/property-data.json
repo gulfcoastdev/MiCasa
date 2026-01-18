@@ -104,10 +104,54 @@
       "utilityBundle": { "price": 400, "includes": ["Power", "Water", "Trash", "Sanitation", "Internet"] },
       "amenities": ["Garage parking (1810, 1816, 1818)", "Private parking for residents only", "Large backyard with Pergola Gazebo", "Firepit", "Grill", "Palm trees"],
       "units": [
-        { "id": "gadsden-1810", "name": "1810 W Gadsden", "bedrooms": 3, "bathrooms": 2, "images": ["assets/slider/image2.jpeg","assets/slider/image17.jpeg","assets/slider/image18.jpeg"], "rent": 1950, "availableDate": "2026-04-06", "status": "available", "featured": false, "bookingUrl": "https://www.zillow.com/homedetails/1818-W-Gadsden-St-Pensacola-FL-32501/447132368_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare" },
-        { "id": "gadsden-1812", "name": "1812 W Gadsden", "bedrooms": 3, "bathrooms": 2, "images": ["assets/slider/image10.jpeg","assets/slider/image20.jpeg","assets/slider/image21.jpeg"], "rent": 1900, "availableDate": "2026-04-22", "status": "available", "featured": false, "bookingUrl": "https://www.zillow.com/homedetails/1812-W-Gadsden-St-Pensacola-FL-32501/2060531734_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare" },
-        { "id": "gadsden-1816", "name": "1816 W Gadsden", "bedrooms": 3, "bathrooms": 2, "images": ["assets/slider/image6.jpeg","assets/slider/image19.jpeg","assets/slider/image22.jpeg"], "rent": 1950, "availableDate": "2026-04-23", "status": "available", "featured": false, "bookingUrl": "https://www.zillow.com/homedetails/44723225_zpid/?view=public" },
-        { "id": "gadsden-1818", "name": "1818 W Gadsden", "bedrooms": 3, "bathrooms": 2, "images": ["assets/slider/image8.jpeg","assets/slider/image23.jpeg","assets/slider/image24.jpeg"], "rent": 1950, "availableDate": "2026-03-22", "status": "available", "featured": true, "bookingUrl": "https://www.zillow.com/homedetails/1818-W-Gadsden-St-Pensacola-FL-32501/447132368_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare" }
+        {
+          "id": "gadsden-1810",
+          "name": "1810 W Gadsden",
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "rent": 1950,
+          "availableDate": "2026-04-06",
+          "status": "available",
+          "featured": false,
+          "images": ["assets/slider/image2.jpeg", "assets/slider/image17.jpeg", "assets/slider/image18.jpeg"],
+          "bookingUrl": "https://www.zillow.com/homedetails/1818-W-Gadsden-St-Pensacola-FL-32501/447132368_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare"
+        },
+        {
+          "id": "gadsden-1812",
+          "name": "1812 W Gadsden",
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "rent": 1900,
+          "availableDate": "2026-04-22",
+          "status": "available",
+          "featured": false,
+          "images": ["assets/slider/image10.jpeg", "assets/slider/image20.jpeg", "assets/slider/image21.jpeg"],
+          "bookingUrl": "https://www.zillow.com/homedetails/1812-W-Gadsden-St-Pensacola-FL-32501/2060531734_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare"
+        },
+        {
+          "id": "gadsden-1816",
+          "name": "1816 W Gadsden",
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "rent": 1950,
+          "availableDate": "2026-04-23",
+          "status": "available",
+          "featured": false,
+          "images": ["assets/slider/image6.jpeg", "assets/slider/image19.jpeg", "assets/slider/image22.jpeg"],
+          "bookingUrl": "https://www.zillow.com/homedetails/44723225_zpid/?view=public"
+        },
+        {
+          "id": "gadsden-1818",
+          "name": "1818 W Gadsden",
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "rent": 1950,
+          "availableDate": "2026-03-22",
+          "status": "available",
+          "featured": true,
+          "images": ["assets/slider/image8.jpeg", "assets/slider/image23.jpeg", "assets/slider/image24.jpeg"],
+          "bookingUrl": "https://www.zillow.com/homedetails/1818-W-Gadsden-St-Pensacola-FL-32501/447132368_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare"
+        }
       ]
     },
     {
@@ -133,8 +177,30 @@
       "utilityBundle": { "price": 400, "includes": ["Power", "Water", "Trash", "Sanitation", "Internet"] },
       "amenities": ["Garage parking", "Fenced backyard"],
       "units": [
-        { "id": "gadsden-duplex-a", "name": "Unit A", "bedrooms": 3, "bathrooms": 2, "rent": 1950, "availableDate": "2026-08-01", "status": "available", "featured": false, "bookingUrl": "https://www.avail.co/l/60493799" },
-        { "id": "gadsden-duplex-b", "name": "Unit B", "bedrooms": 3, "bathrooms": 2, "rent": 1950, "availableDate": "2026-09-01", "status": "available", "featured": false, "bookingUrl": "https://www.avail.co/l/60493799" }
+        {
+          "id": "gadsden-duplex-a",
+          "name": "Unit A",
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "rent": 1950,
+          "availableDate": "2026-08-01",
+          "status": "available",
+          "featured": false,
+          "images": ["assets/slider/image7.jpeg"],
+          "bookingUrl": "https://www.avail.co/l/60493799"
+        },
+        {
+          "id": "gadsden-duplex-b",
+          "name": "Unit B",
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "rent": 1950,
+          "availableDate": "2026-09-01",
+          "status": "available",
+          "featured": false,
+          "images": ["assets/slider/image7.jpeg"],
+          "bookingUrl": "https://www.avail.co/l/60493799"
+        }
       ]
     },
     {
@@ -160,8 +226,30 @@
       "utilityBundle": { "price": 250, "includes": ["Power", "Water", "Trash", "Sanitation", "Internet"] },
       "amenities": ["Large fenced backyard"],
       "units": [
-        { "id": "yacht-harbor-a", "name": "Unit A", "bedrooms": 2, "bathrooms": 1, "rent": 1700, "availableDate": "2026-09-01", "status": "available", "featured": false, "bookingUrl": "https://www.avail.co/companies/micasa" },
-        { "id": "yacht-harbor-b", "name": "Unit B", "bedrooms": 2, "bathrooms": 1, "rent": 1700, "availableDate": "2026-05-01", "status": "available", "featured": false, "bookingUrl": "https://www.avail.co/companies/micasa" }
+        {
+          "id": "yacht-harbor-a",
+          "name": "Unit A",
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "rent": 1700,
+          "availableDate": "2026-09-01",
+          "status": "available",
+          "featured": false,
+          "images": ["assets/slider/image5.jpeg"],
+          "bookingUrl": "https://www.avail.co/companies/micasa"
+        },
+        {
+          "id": "yacht-harbor-b",
+          "name": "Unit B",
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "rent": 1700,
+          "availableDate": "2026-05-01",
+          "status": "available",
+          "featured": false,
+          "images": ["assets/slider/image5.jpeg"],
+          "bookingUrl": "https://www.avail.co/companies/micasa"
+        }
       ]
     }
   ],
