@@ -67,6 +67,17 @@
             </div>
         </section>
 
+        <!-- Featured Units Section -->
+        <section id="featured" class="featured-section">
+            <div class="container">
+                <h2>Featured Listings</h2>
+                <p class="featured-intro">Our top picks for you</p>
+                <div id="featured-container" class="featured-grid">
+                    <!-- Featured units loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
         <!-- Bedroom Filter Section -->
         <section id="filter" class="filter-section">
             <div class="container">

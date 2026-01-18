@@ -274,6 +274,135 @@ function showMapFallback() {
     if (fallbackElement) fallbackElement.style.display = 'flex';
 }
 
+// Featured Units functionality
+function getFeaturedUnits() {
+    const featuredUnits = [];
+    propertyData.properties.forEach(property => {
+        property.units.forEach(unit => {
+            if (unit.featured) {
+                featuredUnits.push({ unit, property });
+            }
+        });
+    });
+    return featuredUnits;
+}
+
+function renderFeaturedUnit(unit, property) {
+    const images = unit.images && unit.images.length > 0 ? unit.images : [property.image];
+    const listingUrl = property.slug ? `listing.php?slug=${property.slug}` : '#';
+    const videoTour = unit.videoTour || property.propertyVideoTour;
+    const bookingUrl = unit.bookingUrl || property.bookingUrl;
+    const uniqueId = `featured-${unit.id}`;
+
+    // Show ALL amenities
+    const allAmenities = property.amenities.map(a => `<li>${a}</li>`).join('');
+
+    // Utility bundle info
+    const utilityInfo = property.id === 'rebecca-street'
+        ? `<span class="featured-utility-included">All utilities included in rent!</span>`
+        : `<span class="featured-utility-available">Utility Bundle Available: ${formatCurrency(property.utilityBundle.price)}/month</span>`;
+
+    // Build image gallery
+    const mainImage = images[0];
+    const thumbnailsHTML = images.length > 1 ? images.map((img, index) => `
+        <img src="${img}" alt="${property.name} - ${unit.name}"
+             class="featured-thumb ${index === 0 ? 'active' : ''}"
+             onclick="switchFeaturedImage('${uniqueId}', '${img}', this)"
+             loading="lazy">
+    `).join('') : '';
+
+    // Video tour button
+    const videoTourBtn = videoTour ? `
+        <button class="featured-video-btn" onclick="openVideoTour('${videoTour}', '${unit.name} - ${property.name}')">
+            <span class="video-icon">🎥</span>
+            Watch Video Tour
+        </button>
+    ` : '';
+
+    // Book now button
+    const bookNowBtn = bookingUrl ? `
+        <a href="${bookingUrl}" target="_blank" class="featured-book-btn">Book Now</a>
+    ` : '';
+
+    return `
+        <div class="featured-card">
+            <div class="featured-card-gallery">
+                <div class="featured-card-main-image">
+                    <img id="${uniqueId}-main" src="${mainImage}" alt="${property.name} - ${unit.name}" loading="lazy">
+                    ${videoTour ? `
+                        <div class="featured-gallery-video-btn">
+                            ${videoTourBtn}
+                        </div>
+                    ` : ''}
+                </div>
+                ${images.length > 1 ? `
+                    <div class="featured-card-thumbnails">
+                        ${thumbnailsHTML}
+                    </div>
+                ` : ''}
+            </div>
+            <div class="featured-card-info">
+                <div class="featured-card-header">
+                    <h4>${property.name}</h4>
+                    <span class="featured-unit-name">${unit.name}</span>
+                </div>
+                <p class="featured-card-address">${property.address}</p>
+                <div class="featured-card-specs">
+                    <span class="featured-spec">${unit.bedrooms} Bed</span>
+                    <span class="featured-spec">${unit.bathrooms} Bath</span>
+                    <span class="featured-spec">${property.squareFootage} sq ft</span>
+                </div>
+                <div class="featured-card-price">
+                    <span class="featured-price">${formatCurrency(unit.rent)}</span>
+                    <span class="featured-price-period">/month</span>
+                </div>
+                <div class="featured-card-availability">
+                    Available: ${formatAvailabilityDate(unit.availableDate)}
+                </div>
+                <div class="featured-card-utility">
+                    ${utilityInfo}
+                </div>
+                <div class="featured-card-amenities">
+                    <h5>Property Features</h5>
+                    <ul>${allAmenities}</ul>
+                </div>
+                <div class="featured-card-buttons">
+                    <a href="${listingUrl}" class="featured-card-cta">View Details →</a>
+                    ${bookNowBtn}
+                </div>
+                <div class="featured-card-contact">
+                    <div class="featured-contact-text">
+                        <h5>Questions or Ready to Book?</h5>
+                        <p>Contact us for details, questions, and availability</p>
+                    </div>
+                    <div class="featured-contact-links">
+                        <a href="tel:+1-850-912-9225" class="featured-contact-link">
+                            <span class="featured-contact-icon">📞</span>
+                            <span>(850) 912-9225</span>
+                        </a>
+                        <a href="mailto:rentalspcola@gmail.com" class="featured-contact-link">
+                            <span class="featured-contact-icon">✉️</span>
+                            <span>rentalspcola@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Switch featured card main image
+function switchFeaturedImage(uniqueId, imageSrc, thumbElement) {
+    const mainImage = document.getElementById(`${uniqueId}-main`);
+    if (mainImage) {
+        mainImage.src = imageSrc;
+    }
+    // Update active thumbnail
+    const container = thumbElement.parentElement;
+    container.querySelectorAll('.featured-thumb').forEach(thumb => thumb.classList.remove('active'));
+    thumbElement.classList.add('active');
+}
+
 // Bedroom Filter functionality
 function filterPropertiesByBedrooms(bedroomCount) {
     if (bedroomCount === 'all') {
@@ -330,6 +459,15 @@ function renderFilteredProperties(bedroomCount) {
 
 // Initialize main page when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Render featured units
+    const featuredContainer = document.getElementById('featured-container');
+    if (featuredContainer) {
+        const featuredUnits = getFeaturedUnits();
+        featuredContainer.innerHTML = featuredUnits.map(({unit, property}) =>
+            renderFeaturedUnit(unit, property)
+        ).join('');
+    }
+
     // Render properties
     const propertiesContainer = document.getElementById('properties-container');
     if (propertiesContainer) {
